@@ -1,0 +1,106 @@
+package com.example.eaters.Adapters;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.eaters.Classes.Restaurant;
+import com.example.eaters.R;
+
+import java.lang.reflect.Field;
+import java.net.URL;
+import java.util.List;
+
+
+
+public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.ViewHolder> {
+
+    private Context mContext;
+    private List<Restaurant> mListaRestaurants;
+    public Restaurant_Adapter(Context mContext, List<Restaurant> mListaDivisions) {
+        this.mContext = mContext;
+        this.mListaRestaurants = mListaDivisions;
+    }
+
+    @NonNull
+    @Override
+    public Restaurant_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View divisionView = inflater.inflate(R.layout.restaurant_item, parent, false);
+        Restaurant_Adapter.ViewHolder viewHolder = new Restaurant_Adapter.ViewHolder(divisionView);
+
+        return viewHolder;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onBindViewHolder(@NonNull Restaurant_Adapter.ViewHolder holder, final int position) {
+        TextView name = holder.name;
+        TextView time = holder.time_dis;
+        TextView distance = holder.distance;
+        TextView stars = holder.stars_review;
+        ImageView back_img = holder.background_img;
+        ImageView logo = holder.logo;
+
+        int id_back = mContext.getResources().getIdentifier(mListaRestaurants.get(position).getBack_img_rest(), "drawable", mContext.getPackageName());
+        int id_logo = mContext.getResources().getIdentifier(mListaRestaurants.get(position).getLogo_path(), "drawable", mContext.getPackageName());
+        Drawable drawable_back = mContext.getResources().getDrawable(id_back);
+        Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
+
+        
+
+        back_img.setImageDrawable(drawable_back);
+        logo.setImageDrawable(drawable_logo);
+
+        name.setText(mListaRestaurants.get(position).getName());
+        time.setText(mListaRestaurants.get(position).getTime_distance());
+        distance.setText(mListaRestaurants.get(position).getDistance());
+        stars.setText(mListaRestaurants.get(position).getStars_review());
+
+
+
+    }
+
+
+
+
+    @Override
+    public int getItemCount() {
+        return mListaRestaurants.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView name, time_dis, stars_review, distance;
+        public ImageView background_img, logo;
+
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            name = (TextView) itemView.findViewById(R.id.rest_name);
+            time_dis = (TextView) itemView.findViewById(R.id.rest_time);
+            stars_review = (TextView) itemView.findViewById(R.id.stars_num);
+            distance = (TextView) itemView.findViewById(R.id.rest_distance);
+            background_img= itemView.findViewById(R.id.back_img_rest);
+            logo= itemView.findViewById(R.id.rest_logo);
+
+
+
+        }
+    }
+}
