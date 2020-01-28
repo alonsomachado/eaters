@@ -1,131 +1,30 @@
 [ 
       { 
          "id":"1",
-         "name":"Pizza Hut",
-         "description":"Pizza Hut is the best",
-         "logo_path":"pizza_hut_logo",
-         "back_img_path":"pizza_hut_back",
-         "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            },
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            }
-         ],
-         "stars_review":"45"
+         "name":"Promo Pizza Hut",
+         "description":"Pizza Hut 10% nas Pizzas",
+         "back_img_path":"pizza_hut_back"
+
       },
       { 
          "id":"2",
          "name":"Burguer King",
-         "description":"Pizza Hut is the best",
-         "logo_path":"bk_logo",
-         "back_img_path":"burguer_king_back",
-         "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            },
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            }
-         ],
-         "stars_review":"45"
+         "description":"BK Combo a 7 Euros",
+         "back_img_path":"burguer_king_back"
+
       },
       { 
-         "id":"1",
+         "id":"3",
          "name":"Mac'Donalds",
-         "description":"Pizza Hut is the best",
-         "logo_path":"mac_logo",
-         "back_img_path":"mac_back",
-         "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            },
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            }
-         ],
-         "stars_review":"45"
-      }
-	  ,
-      { 
-         "id":"1",
-         "name":"Taberna Belga",
-         "description":"Pizza Hut is the best",
-         "logo_path":"pizza_hut_logo",
-         "back_img_path":"pizza_hut_back",
-         "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            },
-            { 
-               "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
-               "logo_path":"qp1",
-               "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
-            }
-         ],
-         "stars_review":"45"
+         "description":"Novos Lanches",
+         "back_img_path":"mac_back"
+
+      },
+      {
+         "id":"4",
+         "name":"Teste",
+         "description":"Teste $!!!",
+         "back_img_path":"mac_back"
+
       }
    ]

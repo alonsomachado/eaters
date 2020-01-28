@@ -6,48 +6,24 @@ public class Promocao {
 
     private String id;
     private String name;
+    private String back_img_promo;
     private String description;
-    private String logo_path;
-    private String back_img_rest;
-    private String time_distance;
-    private String distance;
-    private List<Food> food_list;
 
-    public Promocao(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance) {
+    public Promocao(String id,String name,String back_img_promo,String description){
         this.id = id;
         this.name = name;
         this.description = description;
-        this.logo_path = logo_path;
-        this.back_img_rest = back_img_rest;
-        this.time_distance = time_distance;
-        this.distance = distance;
+        this.back_img_promo = back_img_promo;
+
     }
 
-    public Promocao(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance, List<Food> food_list) {
-        this.id = id;
-        this.name = name;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
-        this.logo_path = logo_path;
-        this.back_img_rest = back_img_rest;
-        this.time_distance = time_distance;
-        this.distance = distance;
-        this.food_list = food_list;
-    }
-
-    public String getBack_img_rest() {
-        return back_img_rest;
-    }
-
-    public void setBack_img_rest(String back_img_rest) {
-        this.back_img_rest = back_img_rest;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -58,44 +34,19 @@ public class Promocao {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getId() {
+        return id;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getLogo_path() {
-        return logo_path;
+    public String getBack_img_promo() {
+        return back_img_promo;
     }
 
-    public void setLogo_path(String logo_path) {
-        this.logo_path = logo_path;
+    public void setBack_img_promo(String back_img_promo) {
+        this.back_img_promo = back_img_promo;
     }
-
-    public String getTime_distance() {
-        return time_distance;
-    }
-
-    public void setTime_distance(String time_distance) {
-        this.time_distance = time_distance;
-    }
-
-    public String getDistance() {
-        return distance;
-    }
-
-    public void setDistance(String distance) {
-        this.distance = distance;
-    }
-
-    public List<Food> getFood_list() {
-        return food_list;
-    }
-
-    public void setFood_list(List<Food> food_list) {
-        this.food_list = food_list;
-    }
-
 }

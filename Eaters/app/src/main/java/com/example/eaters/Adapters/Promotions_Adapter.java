@@ -8,12 +8,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.design.card.MaterialCardView;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eaters.Classes.Promocao;
 import com.example.eaters.R;
@@ -44,24 +47,35 @@ public class Promotions_Adapter extends RecyclerView.Adapter<Promotions_Adapter.
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull Promotions_Adapter.ViewHolder holder, final int position) {
+        //MaterialCardView itemPromo = holder.itemPromo;
+        CardView itemPromo = holder.itemPromo;
         TextView name = holder.name;
-        TextView time = holder.time_dis;
-        TextView distance = holder.distance;
+        TextView description = holder.description;
         ImageView back_img = holder.background_img;
-        ImageView logo = holder.logo;
 
-        int id_back = mContext.getResources().getIdentifier(mListaPromocao.get(position).getBack_img_rest(), "drawable", mContext.getPackageName());
-        int id_logo = mContext.getResources().getIdentifier(mListaPromocao.get(position).getLogo_path(), "drawable", mContext.getPackageName());
+
+        int id_back = mContext.getResources().getIdentifier(mListaPromocao.get(position).getBack_img_promo(), "drawable", mContext.getPackageName());
         Drawable drawable_back = mContext.getResources().getDrawable(id_back);
-        Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
-
 
         back_img.setImageDrawable(drawable_back);
-        logo.setImageDrawable(drawable_logo);
 
         name.setText(mListaPromocao.get(position).getName());
-        time.setText(mListaPromocao.get(position).getTime_distance());
-        distance.setText(mListaPromocao.get(position).getDistance());
+        description.setText(mListaPromocao.get(position).getDescription());
+
+        itemPromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*
+                FragmentManager fragmentManager = ((Inicial_Activity) mContext).getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.addToBackStack(null);
+                SensorsOfDivision_fragment fragment = new SensorsOfDivision_fragment();
+                fragment.setArguments(bundle);
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.commit();*/
+                Toast.makeText(mContext.getApplicationContext(),"Clicou na Promocao"+mListaPromocao.get(position).getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
     /*
@@ -166,17 +180,18 @@ public class Promotions_Adapter extends RecyclerView.Adapter<Promotions_Adapter.
         }
     }*/
 
-        public TextView name, time_dis, distance;
-        public ImageView background_img, logo;
+        public TextView name, description;
+        public ImageView background_img;
+        public CardView itemPromo;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.rest_name);
-            time_dis = (TextView) itemView.findViewById(R.id.rest_time);
-            distance = (TextView) itemView.findViewById(R.id.rest_distance);
-            background_img = itemView.findViewById(R.id.back_img_rest);
-            logo = itemView.findViewById(R.id.rest_logo);
+            name = (TextView) itemView.findViewById(R.id.promo_name);
+            description = (TextView) itemView.findViewById(R.id.promo_description);
+            background_img = itemView.findViewById(R.id.back_img_promo);
+            itemPromo = itemView.findViewById(R.id.itemPromo);
+
 
         }
     }
