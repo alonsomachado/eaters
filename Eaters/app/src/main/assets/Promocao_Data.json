@@ -1,0 +1,30 @@
+[ 
+      { 
+         "id":"1",
+         "name":"Promo Pizza Hut",
+         "description":"Pizza Hut 10% nas Pizzas",
+         "back_img_path":"pizza_hut_back"
+
+      },
+      { 
+         "id":"2",
+         "name":"Burguer King",
+         "description":"BK Combo a 7 Euros",
+         "back_img_path":"burguer_king_back"
+
+      },
+      { 
+         "id":"3",
+         "name":"Mac'Donalds",
+         "description":"Novos Lanches",
+         "back_img_path":"mac_back"
+
+      },
+      {
+         "id":"4",
+         "name":"Teste",
+         "description":"Teste $!!!",
+         "back_img_path":"mac_back"
+
+      }
+   ]

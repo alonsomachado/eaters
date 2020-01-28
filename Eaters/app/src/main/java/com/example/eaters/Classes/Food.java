@@ -4,22 +4,21 @@ public class Food {
 
     private String id;
     private String name;
-    private String description;
-    private String ingredients;
+    private String ingredientes;
     private String back_img_food;
     private String rest_logo;
-    private float price;
-    private float stars_review;
+    private float preco;
+    private float nota;
 
-    public Food(String id, String name, String description, String ingredients, String back_img_food, String rest_logo, float price, float stars_review) {
+
+    public Food(String id, String name, String ingredientes, String back_img_food, String rest_logo, float preco, float nota) {
         this.id = id;
         this.name = name;
-        this.description = description;
-        this.ingredients = ingredients;
+        this.ingredientes = ingredientes;
         this.back_img_food = back_img_food;
         this.rest_logo = rest_logo;
-        this.price = price;
-        this.stars_review = stars_review;
+        this.preco = preco;
+        this.nota = nota;
     }
 
 
@@ -55,35 +54,23 @@ public class Food {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getIngredientes() {
+        return ingredientes;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setIngredientes(String ingredients) {
+        this.ingredientes = ingredients;
     }
 
-    public String getIngredients() {
-        return ingredients;
+    public float getPreco() {
+        return preco;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
 
-    public float getPrice() {
-        return price;
-    }
+    public float getNota() { return nota;  }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public float getStars_review() {
-        return stars_review;
-    }
-
-    public void setStars_review(float stars_review) {
-        this.stars_review = stars_review;
-    }
+    public void setNota(float nota) { this.nota = nota;  }
 }

@@ -1,131 +1,338 @@
 [ 
       { 
          "id":"1",
-         "name":"Pizza Hut",
+         "name":"Pizza Hut Guimarães",
          "description":"Pizza Hut is the best",
          "logo_path":"pizza_hut_logo",
          "back_img_path":"pizza_hut_back",
          "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
+         "distance":"16 km",
+         "food_list":[
+            {
+               "id":"1",
                "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4.5"
             },
-            { 
+            {
                "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
             }
          ],
-         "stars_review":"45"
+         "stars_review":"75"
       },
       { 
          "id":"2",
-         "name":"Burguer King",
-         "description":"Pizza Hut is the best",
+         "name":"Burguer King Guimarães ",
+         "description":"BK 1 is the best",
          "logo_path":"bk_logo",
          "back_img_path":"burguer_king_back",
          "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
+         "distance":"16 km",
+         "food_list":[
+            {
+               "id":"1",
                "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4.5"
             },
-            { 
+            {
                "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
             }
          ],
          "stars_review":"45"
       },
       { 
-         "id":"1",
-         "name":"Mac'Donalds",
-         "description":"Pizza Hut is the best",
+         "id":"3",
+         "name":"Mac'Donalds Felgueiras",
+         "description":"Mac is the best",
          "logo_path":"mac_logo",
          "back_img_path":"mac_back",
          "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
+         "distance":"2 km",
+         "food_list":[
+            {
+               "id":"1",
                "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4.5"
             },
-            { 
+            {
                "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
             }
          ],
-         "stars_review":"45"
-      }
-	  ,
+         "stars_review":"85"
+      },
       { 
-         "id":"1",
+         "id":"4",
          "name":"Taberna Belga",
-         "description":"Pizza Hut is the best",
+         "description":"Taberna Belga - A melhor taberna do Norte de Portugal!",
          "logo_path":"pizza_hut_logo",
          "back_img_path":"pizza_hut_back",
          "time_distance":"10-20 min",
-         "distance":"12 km",
-         "food_list":[ 
-            { 
-               "id":"2",
+         "distance":"38 km",
+         "food_list":[
+            {
+               "id":"1",
                "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4.5"
             },
-            { 
+            {
                "id":"2",
-               "name":"Pizza Calabreza",
-               "description":"Pizza Calabreza is the best",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
                "logo_path":"qp1",
                "back_img_path":"qp1",
-               "time_distance":"10-20 min",
-               "distance":"12 km",
-               "stars_review":"45"
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
             }
          ],
-         "stars_review":"45"
+         "stars_review":"999"
+      },
+      {
+         "id":"5",
+         "name":"Burguer King Braga ",
+         "description":"BK 1 is the best",
+         "logo_path":"bk_logo",
+         "back_img_path":"burguer_king_back",
+         "time_distance":"10-20 min",
+         "distance":"49 km",
+         "food_list":[
+            {
+               "id":"1",
+               "name":"Pizza Calabreza",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4.5"
+            },
+            {
+               "id":"2",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            }
+         ],
+         "stars_review":"321"
+      },
+      {
+         "id":"6",
+         "name":"Mac'Donalds Braga",
+         "description":"Mac is the best",
+         "logo_path":"mac_logo",
+         "back_img_path":"mac_back",
+         "time_distance":"10-20 min",
+         "distance":"42 km",
+         "food_list":[
+            {
+               "id":"1",
+               "name":"Pizza Calabreza",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4.5"
+            },
+            {
+               "id":"2",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            }
+         ],
+         "stars_review":"0"
+      },
+      {
+         "id":"7",
+         "name":"Mac'Donalds Coimbra",
+         "description":"Mac is the best",
+         "logo_path":"mac_logo",
+         "back_img_path":"mac_back",
+         "time_distance":"10-20 min",
+         "distance":"1 km",
+         "food_list":[
+            {
+               "id":"1",
+               "name":"Pizza Calabreza",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4.5"
+            },
+            {
+               "id":"2",
+               "name":"Pizza Mussarela",
+               "ingredientes":"Massa, Molho de Tomate e Mussarela",
+               "preco":"8",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"4"
+            },
+            {
+               "id":"3",
+               "name":"Pizza Frango com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+               "preco":"9",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            },
+            {
+               "id":"4",
+               "name":"Pizza Calabreza com Philadelphia",
+               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+               "preco":"10",
+               "logo_path":"qp1",
+               "back_img_path":"qp1",
+               "nota":"5"
+            }
+         ],
+         "stars_review":"487"
       }
-   ]
+]
