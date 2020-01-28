@@ -40,32 +40,32 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.navigation_home:
                     selectedFragment = new Main_Fragment();
-                    transaction.replace(R.id.fragment_container, selectedFragment, "Home").commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menuhome)).commit();
                     break;
 
 
                 case R.id.navigation_search:
                     selectedFragment = new Search_Fragment();
 
-                    transaction.replace(R.id.fragment_container, selectedFragment, "Divisions").commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menubuscar)).commit();
                     break;
 
                 case R.id.favourites:
                     selectedFragment = new Favorites_Fragment();
 
-                    transaction.replace(R.id.fragment_container, selectedFragment, "Search").commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menufavoritos)).commit();
                     return true;
 
                 case R.id.cart:
                     selectedFragment = new Cart_Fragment();
 
-                    transaction.replace(R.id.fragment_container, selectedFragment, "Profile").commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menucarrinho)).commit();
                     break;
 
                 case R.id.navigation_profile:
                     selectedFragment = new Profile_Fragment();
 
-                    transaction.replace(R.id.fragment_container, selectedFragment, "Profile").commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menuperfil)).commit();
                     break;
 
 

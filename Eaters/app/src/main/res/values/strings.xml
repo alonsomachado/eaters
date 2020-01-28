@@ -15,5 +15,12 @@
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Fragmento Vazio</string>
+    <string name="menuhome">Home</string>
+    <string name="menubuscar">Buscar</string>
+    <string name="menufavoritos">Favoritos</string>
+    <string name="menucarrinho">Carrinho</string>
+    <string name="menuperfil">Perfil</string>
+    <string name="promolabel">Promoções:</string>
+
 </resources>
