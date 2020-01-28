@@ -7,7 +7,7 @@
     tools:context=".Activities.LoginActivity">
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/textInputLayout5"
+        android:id="@+id/name_login"
         android:layout_width="333dp"
         android:layout_height="49dp"
         android:layout_marginStart="8dp"
@@ -24,7 +24,7 @@
     </android.support.v7.widget.AppCompatEditText>
 
     <android.support.v7.widget.AppCompatEditText
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/pass_login"
         android:layout_width="333dp"
         android:layout_height="51dp"
         android:layout_marginStart="8dp"
@@ -35,7 +35,7 @@
         android:hint="Palavra Passe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"></android.support.v7.widget.AppCompatEditText>
+        app:layout_constraintTop_toBottomOf="@+id/name_login"></android.support.v7.widget.AppCompatEditText>
 
     <Button
         android:id="@+id/btn_login"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/pass_login"
         app:layout_constraintVertical_bias="0.973" />
 
 

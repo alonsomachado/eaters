@@ -30,14 +30,14 @@ public class SignUpActivity extends AppCompatActivity {
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                attemptSignIn(name.getText().toString(),pass.getText().toString());
+                attemptSignup(name.getText().toString(),pass.getText().toString());
             }
         });
 
 
     }
 
-    public void attemptSignIn(String nEmail, String nPass) {
+    public void attemptSignup(String nEmail, String nPass) {
 
         name.setError(null);
         pass.setError(null);
@@ -72,9 +72,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         } else {
 
-            Toast.makeText(SignUpActivity.this, "Bem vindo ", Toast.LENGTH_LONG).show();
 
-            sign_in(nEmail, nPass);
+
+            sign_up(nEmail, nPass);
         }
     }
 
@@ -87,7 +87,7 @@ public class SignUpActivity extends AppCompatActivity {
         return email.length()>4;
     }
 
-    public void sign_in(String email, String password) {
+    public void sign_up(String email, String password) {
 
     }
 
