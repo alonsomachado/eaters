@@ -3,6 +3,7 @@ package com.example.eaters.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -98,11 +99,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void sign_in(String name, String password) {
 
-
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("name", name);
-        editor.commit();
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        String person_name = settings.getString("name", "");
 
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
