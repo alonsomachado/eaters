@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Eaters</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="hello_blank_fragment">Fragmento Vazio</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
@@ -12,16 +13,22 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
 
-    <string name="hello_blank_fragment">Fragmento Vazio</string>
+    <!-- Strings related to Main -->
     <string name="menuhome">Home</string>
     <string name="menubuscar">Buscar</string>
     <string name="menufavoritos">Favoritos</string>
     <string name="menucarrinho">Carrinho</string>
     <string name="menuperfil">Perfil</string>
     <string name="promolabel">Promoções:</string>
+
+    <!-- Strings related to Pagamento -->
     <string name="pagamentoHeader">Formas de Pagamento</string>
     <string name="pagamentoText">Escolha uma das formas de pagamento aceitas por este estabelecimento.</string>
 
     <string name="actionButtonText">Finalizar Pedido</string>
+
+    <!-- Strings related to Pedido -->
+    <string name="pedidoConcluidoHeader">Pedido Concluido</string>
+    <string name="pedidoConcluidoText">Obrigado pela compra</string>
 
 </resources>
