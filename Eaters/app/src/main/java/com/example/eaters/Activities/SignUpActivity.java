@@ -1,5 +1,7 @@
 package com.example.eaters.Activities;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -41,6 +43,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         name.setError(null);
         pass.setError(null);
+        pass_confirm.setError(null);
 
         boolean cancel = false;
         View focusView = null;
@@ -62,6 +65,12 @@ public class SignUpActivity extends AppCompatActivity {
         } else if (!isEmailValid(nEmail)) {
             name.setError("Nome Invalido");
             focusView = name;
+            cancel = true;
+        }
+
+        if (isEqualsPass()) {
+            pass_confirm.setError("Passes diferentes");
+            focusView = pass_confirm;
             cancel = true;
         }
 
@@ -87,7 +96,21 @@ public class SignUpActivity extends AppCompatActivity {
         return email.length()>4;
     }
 
-    public void sign_up(String email, String password) {
+    private boolean isEqualsPass () {
+
+        return pass_confirm.getText().toString().equals(pass.getText().toString());
+    }
+
+    public void sign_up(String name, String password) {
+
+
+
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("name", name);
+        editor.putString("pass", password);
+        editor.putString("address", address.getText().toString());
+        editor.commit();
 
     }
 
