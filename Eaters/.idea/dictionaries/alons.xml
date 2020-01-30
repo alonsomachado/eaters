@@ -1,13 +1,19 @@
 <component name="ProjectDictionaryState">
   <dictionary name="alons">
     <words>
+      <w>burguer</w>
       <w>concluido</w>
+      <w>favorit</w>
+      <w>hamburgueria</w>
+      <w>imgfav</w>
       <w>ingredientes</w>
       <w>menufood</w>
+      <w>nota</w>
       <w>pedido</w>
       <w>pedidoconcluidoheader</w>
       <w>pedidoconcluidoop</w>
       <w>pedidoconcluidotext</w>
+      <w>restfav</w>
     </words>
   </dictionary>
 </component>

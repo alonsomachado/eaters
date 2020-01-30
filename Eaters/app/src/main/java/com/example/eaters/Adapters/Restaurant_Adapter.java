@@ -56,8 +56,10 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
         TextView time = holder.time_dis;
         TextView distance = holder.distance;
         TextView stars = holder.stars_review;
+        TextView resttipo = holder.resttipo;
         ImageView back_img = holder.background_img;
         ImageView logo = holder.logo;
+
 
         CardView restaurant = holder.restaurant;
 
@@ -75,6 +77,7 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
         time.setText(mListaRestaurants.get(position).getTime_distance());
         distance.setText(mListaRestaurants.get(position).getDistance());
         stars.setText(mListaRestaurants.get(position).getStars_review());
+        resttipo.setText(mListaRestaurants.get(position).getResttipo());
 
         restaurant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +100,7 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name, time_dis, stars_review, distance;
+        public TextView name, time_dis, stars_review, distance, resttipo;
         public ImageView background_img, logo;
         public CardView restaurant;
 
@@ -110,7 +113,7 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
             distance = (TextView) itemView.findViewById(R.id.rest_distance);
             background_img= itemView.findViewById(R.id.back_img_rest);
             logo= itemView.findViewById(R.id.rest_logo);
-
+            resttipo = (TextView) itemView.findViewById(R.id.resttipo);
             restaurant = itemView.findViewById(R.id.restaurant);
 
 

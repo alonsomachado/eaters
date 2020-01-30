@@ -84,10 +84,11 @@ public class Main_Fragment extends Fragment {
                 String logo_path = restaurant.getString("logo_path");
                 String back_img_path = restaurant.getString("back_img_path");
                 String time_distance = restaurant.getString("time_distance");
+                String resttipo = restaurant.getString("resttipo");
                 String distance = restaurant.getString("distance");
                 String stars_review = restaurant.getString("stars_review");
 
-                Restaurant restaurant_rv= new Restaurant(id, name, description,logo_path,back_img_path,time_distance,distance,stars_review);
+                Restaurant restaurant_rv= new Restaurant(id, name, description,logo_path,back_img_path,time_distance,distance,stars_review,resttipo);
 
                 restaurants.add(restaurant_rv);
 
@@ -105,7 +106,7 @@ public class Main_Fragment extends Fragment {
             e.printStackTrace();
         }
 
-        Log.e("Dados Restaurantes", json);
+        //Log.e("Dados Restaurantes", json);
 
 
         return restaurants;
@@ -154,7 +155,7 @@ public class Main_Fragment extends Fragment {
             e.printStackTrace();
         }
 
-        Log.e("Dados Promocoes", json);
+        //Log.e("Dados Promocoes", json);
 
 
         return promocoes;

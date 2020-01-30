@@ -6,6 +6,7 @@
          "logo_path":"pizza_hut_logo",
          "back_img_path":"pizza_hut_back",
          "time_distance":"10-20 min",
+         "resttipo":"Pizzaria",
          "distance":"16 km",
          "food_list":[
             {
@@ -78,6 +79,7 @@
          "logo_path":"bk_logo",
          "back_img_path":"burguer_king_back",
          "time_distance":"10-20 min",
+         "resttipo":"Hamburgueria",
          "distance":"16 km",
          "food_list":[
             {
@@ -150,6 +152,7 @@
          "logo_path":"mac_logo",
          "back_img_path":"mac_back",
          "time_distance":"10-20 min",
+         "resttipo":"Hamburgueria",
          "distance":"2 km",
          "food_list":[
             {
@@ -221,6 +224,7 @@
          "description":"Taberna Belga - A melhor taberna do Norte de Portugal!",
          "logo_path":"pizza_hut_logo",
          "back_img_path":"pizza_hut_back",
+         "resttipo":"Pizzaria",
          "time_distance":"10-20 min",
          "distance":"38 km",
          "food_list":[
@@ -294,6 +298,7 @@
          "logo_path":"bk_logo",
          "back_img_path":"burguer_king_back",
          "time_distance":"10-20 min",
+         "resttipo":"Hamburgueria",
          "distance":"49 km",
          "food_list":[
             {
@@ -366,6 +371,7 @@
          "logo_path":"mac_logo",
          "back_img_path":"mac_back",
          "time_distance":"10-20 min",
+         "resttipo":"Hamburgueria",
          "distance":"42 km",
          "food_list":[
             {
@@ -438,6 +444,7 @@
          "logo_path":"mac_logo",
          "back_img_path":"mac_back",
          "time_distance":"10-20 min",
+         "resttipo":"Hamburgueria",
          "distance":"1 km",
          "food_list":[
             {

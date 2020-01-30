@@ -11,21 +11,23 @@ public class Restaurant {
     private String back_img_rest;
     private String time_distance;
     private String distance;
+    private String resttipo;
     private List<Food> food_list;
     private String stars_review;
 
-    public Restaurant(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance, String stars_review) {
+    public Restaurant(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance, String stars_review, String resttipo) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.logo_path = logo_path;
         this.back_img_rest = back_img_rest;
         this.time_distance = time_distance;
+        this.resttipo = resttipo;
         this.distance = distance;
         this.stars_review = stars_review;
     }
 
-    public Restaurant(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance, List<Food> food_list, String stars_review) {
+    public Restaurant(String id, String name, String description, String logo_path, String back_img_rest, String time_distance, String distance, List<Food> food_list, String stars_review, String resttipo) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -35,6 +37,7 @@ public class Restaurant {
         this.distance = distance;
         this.food_list = food_list;
         this.stars_review = stars_review;
+        this.resttipo = resttipo;
     }
 
     public String getBack_img_rest() {
@@ -107,5 +110,13 @@ public class Restaurant {
 
     public void setStars_review(String stars_review) {
         this.stars_review = stars_review;
+    }
+
+    public String getResttipo() {
+        return resttipo;
+    }
+
+    public void setResttipo(String resttipo) {
+        this.resttipo = resttipo;
     }
 }
