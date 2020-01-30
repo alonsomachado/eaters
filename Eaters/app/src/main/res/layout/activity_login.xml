@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Activities.LoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/name_login"
         android:layout_width="333dp"
@@ -35,7 +46,9 @@
         android:hint="Palavra Passe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_login"></android.support.v7.widget.AppCompatEditText>
+        app:layout_constraintTop_toBottomOf="@+id/name_login">
+
+    </android.support.v7.widget.AppCompatEditText>
 
     <Button
         android:id="@+id/btn_login"

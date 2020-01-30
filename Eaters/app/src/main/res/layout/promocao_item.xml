@@ -26,29 +26,25 @@
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/promo_name"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="30dp"
             android:textColor="@android:color/white"
             android:textSize="10pt"
             android:textStyle="bold"
             app:fontFamily="sans-serif"
             app:layout_constraintBottom_toTopOf="@id/promo_description"
-            app:layout_constraintTop_toTopOf="@+id/back_img_promo"/>
+            app:layout_constraintTop_toTopOf="@+id/back_img_promo" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/promo_description"
-            android:layout_width="185dp"
-            android:layout_height="33dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:textColor="@android:color/white"
             android:textSize="10pt"
             app:fontFamily="sans-serif"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/promo_name"
-            app:layout_constraintVertical_bias="0.418" />
+            app:layout_constraintTop_toBottomOf="@id/promo_name" />
 
 
     </android.support.constraint.ConstraintLayout>

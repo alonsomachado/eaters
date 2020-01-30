@@ -7,11 +7,12 @@ public class Food {
     private String ingredientes;
     private String back_img_food;
     private String rest_logo;
-    private float preco;
-    private float nota;
+    private String preco;
+    private String nota;
+    private String tipo;
 
 
-    public Food(String id, String name, String ingredientes, String back_img_food, String rest_logo, float preco, float nota) {
+    public Food(String id, String name, String ingredientes, String back_img_food, String rest_logo, String preco, String nota, String tipo) {
         this.id = id;
         this.name = name;
         this.ingredientes = ingredientes;
@@ -19,6 +20,7 @@ public class Food {
         this.rest_logo = rest_logo;
         this.preco = preco;
         this.nota = nota;
+        this.tipo = tipo;
     }
 
 
@@ -62,15 +64,23 @@ public class Food {
         this.ingredientes = ingredients;
     }
 
-    public float getPreco() {
+    public String getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(String preco) {
         this.preco = preco;
     }
 
-    public float getNota() { return nota;  }
+    public String getNota() { return nota;  }
 
-    public void setNota(float nota) { this.nota = nota;  }
+    public void setNota(String nota) { this.nota = nota;  }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }

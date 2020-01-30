@@ -10,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.eaters.Adapters.ItemMenu_Adapter;
+import com.example.eaters.Adapters.MenuFood_Adapter;
 import com.example.eaters.Adapters.Promotions_Adapter;
 import com.example.eaters.Adapters.Restaurant_Adapter;
+import com.example.eaters.Classes.Food;
 import com.example.eaters.Classes.Promocao;
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
@@ -23,38 +26,46 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 
 public class MenuRestaurant_Fragment extends Fragment {
 
     private View v;
-   // private Button btn_add_div;
-    RecyclerView rv_restaurants;
-    Restaurant_Adapter rest_adapter;
+    RecyclerView rv_food;
+    ItemMenu_Adapter food_adapter;
+
+    RecyclerView rv_menufood;
+    MenuFood_Adapter menu_adapter;
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        v = inflater.inflate(R.layout.fragment_main_, container, false);
-        rv_restaurants = v.findViewById(R.id.rv_rest);
-        rv_restaurants.setHasFixedSize(true);
-        rv_restaurants.setLayoutManager(new LinearLayoutManager(getContext()));
+        v = inflater.inflate(R.layout.fragment_menufood, container, false);
 
-        String restauranteDummyData = "Restaurants_Data.json";
-        getAssetJsonData(getContext(), restauranteDummyData);
+        rv_food = v.findViewById(R.id.rv_food);
+        rv_food.setHasFixedSize(true);
+        rv_food.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
+        String foodDummyData = "Food_Data.json";
+        getAssetJsonData(getContext(), foodDummyData);
+
+        rv_menufood = v.findViewById(R.id.rv_menufood);
+        rv_menufood.setHasFixedSize(true);
+        rv_menufood.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        getAssetTipoJsonData(getContext(), foodDummyData);
 
         return v;
     }
 
-    public ArrayList<Restaurant> getAssetJsonData(Context context, String arqData) {
+    public ArrayList<Food> getAssetJsonData(Context context, String arqData) {
         String json = null;
-
-        ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+        //HashSet<String> foodtypemenu = new HashSet<String>();
+        ArrayList<Food> foods = new ArrayList<Food>();
         try {
             InputStream is = context.getAssets().open(arqData);
             int size = is.available();
@@ -68,26 +79,75 @@ public class MenuRestaurant_Fragment extends Fragment {
 
             for ( int i=0 ; i< jsonArray.length(); i++ ){
 
-                JSONObject restaurant = jsonArray.getJSONObject(i);
+                JSONObject itemmenu = jsonArray.getJSONObject(i);
 
-                String id = restaurant.getString("id");
-                String name = restaurant.getString("name");
-                String description = restaurant.getString("description");
-                String logo_path = restaurant.getString("logo_path");
-                String back_img_path = restaurant.getString("back_img_path");
-                String time_distance = restaurant.getString("time_distance");
-                String distance = restaurant.getString("distance");
-                String stars_review = restaurant.getString("stars_review");
+                String id = itemmenu.getString("id");
+                String name = itemmenu.getString("name");
+                String ingredientes = itemmenu.getString("ingredientes");
+                String logo_path = itemmenu.getString("logo_path");
+                String back_img_path = itemmenu.getString("back_img_path");
+                String preco = itemmenu.getString("preco");
+                String nota = itemmenu.getString("nota");
+                String tipo = itemmenu.getString("tipo");
 
-                Restaurant restaurant_rv= new Restaurant(id, name, description,logo_path,back_img_path,time_distance,distance,stars_review);
+                Food fooditem = new Food(id,name,ingredientes,back_img_path,logo_path,preco,nota,tipo);
 
-                restaurants.add(restaurant_rv);
+                //foodtypemenu.add(tipo);
+                foods.add(fooditem);
+
+            }
+            //Foods in the RV
+            food_adapter = new ItemMenu_Adapter(context, foods);
+            rv_food.setAdapter(food_adapter);
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        Log.e("Menu do Restaurante: ", json);
+
+        return foods;
+    }
+
+    public ArrayList<Food> getAssetTipoJsonData(Context context, String arqData) {
+        String json = null;
+
+        ArrayList<Food> foodmenu = new ArrayList<Food>();
+        try {
+            InputStream is = context.getAssets().open(arqData);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+
+            JSONArray jsonArray= new JSONArray(json);
+
+
+            for ( int i=0 ; i< jsonArray.length(); i++ ){
+
+                JSONObject itemmenu = jsonArray.getJSONObject(i);
+
+                String id = itemmenu.getString("id");
+                String name = itemmenu.getString("name");
+                String ingredientes = itemmenu.getString("ingredientes");
+                String logo_path = itemmenu.getString("logo_path");
+                String back_img_path = itemmenu.getString("back_img_path");
+                String preco = itemmenu.getString("preco");
+                String nota = itemmenu.getString("nota");
+                String tipo = itemmenu.getString("tipo");
+
+                Food fooditem = new Food(id,name,ingredientes,back_img_path,logo_path,preco,nota,tipo);
+                foodmenu.add(fooditem);
 
             }
 
-
-            rest_adapter = new Restaurant_Adapter(context, restaurants);
-            rv_restaurants.setAdapter(rest_adapter);
+            //Types of Foods for the Other RV
+            menu_adapter = new MenuFood_Adapter(context, foodmenu);
+            rv_menufood.setAdapter(menu_adapter);
 
 
         } catch (IOException ex) {
@@ -97,30 +157,10 @@ public class MenuRestaurant_Fragment extends Fragment {
             e.printStackTrace();
         }
 
-        Log.e("Dados Menu do Restaurante", json);
+        Log.e("Menu do Restaurante: ", json);
 
 
-        return restaurants;
-    }
-
-
-    public static String getJsonData(Context context, String arqData) {
-        String json = null;
-        try {
-            InputStream is = context.getAssets().open(arqData);
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            json = new String(buffer, "UTF-8");
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
-        }
-
-        Log.e("data", json);
-        return json;
-
+        return foodmenu;
     }
 
 

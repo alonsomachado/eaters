@@ -1,0 +1,62 @@
+[
+  {
+    "id":"1",
+    "name":"Pizza Calabreza",
+    "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+    "preco":"9",
+    "logo_path":"qp1",
+    "back_img_path":"pizzacalabreza",
+    "tipo":"pizza",
+    "nota":"4.5"
+  },
+  {
+    "id":"2",
+    "name":"Pizza Marguerita",
+    "ingredientes":"Massa, Molho de Tomate e Mussarela",
+    "preco":"8",
+    "logo_path":"pizzamarguerita",
+    "back_img_path":"qp1",
+    "tipo":"pizza",
+    "nota":"4"
+  },
+  {
+    "id":"3",
+    "name":"Pizza Frango com Philadelphia",
+    "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
+    "preco":"9",
+    "logo_path":"qp1",
+    "back_img_path":"pizzafrangophiladelphia",
+    "tipo":"pizza",
+    "nota":"5"
+  },
+  {
+    "id":"4",
+    "name":"Pizza Calabreza com Philadelphia",
+    "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+    "preco":"10",
+    "logo_path":"qp1",
+    "back_img_path":"pizzacalabrezaphiladelphia",
+    "tipo":"pizza",
+    "nota":"5"
+  },
+  {
+    "id":"5",
+    "name":"Pizza Chocolate",
+    "ingredientes":"Massa, Chocolate, Morangos",
+    "preco":"10",
+    "logo_path":"qp1",
+    "back_img_path":"pizzachocolate",
+    "tipo":"pizza doce",
+    "nota":"5"
+  },
+  {
+    "id":"6",
+    "name":"Pizza Chocolate com Sorvete",
+    "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
+    "preco":"10",
+    "logo_path":"qp1",
+    "back_img_path":"pizzachocosorvete",
+    "tipo":"pizza doce",
+    "nota":"5"
+  }
+]

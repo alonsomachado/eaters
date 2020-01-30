@@ -18,6 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+
 import com.example.eaters.Classes.Promocao;
 import com.example.eaters.R;
 import java.util.List;
@@ -65,15 +70,17 @@ public class Promotions_Adapter extends RecyclerView.Adapter<Promotions_Adapter.
         itemPromo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                FragmentManager fragmentManager = ((Inicial_Activity) mContext).getSupportFragmentManager();
+
+                /*FragmentManager fragmentManager =  (mContext).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.addToBackStack(null);
                 SensorsOfDivision_fragment fragment = new SensorsOfDivision_fragment();
                 fragment.setArguments(bundle);
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.commit();*/
-                Toast.makeText(mContext.getApplicationContext(),"Clicou na Promocao"+mListaPromocao.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+
+                Toast.makeText(mContext.getApplicationContext(),"Clicou na Promocao "+mListaPromocao.get(position).getName(),Toast.LENGTH_SHORT).show();
             }
         });
 

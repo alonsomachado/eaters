@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.eaters.Fragments.Cart_Fragment;
 import com.example.eaters.Fragments.Favorites_Fragment;
 import com.example.eaters.Fragments.Main_Fragment;
+import com.example.eaters.Fragments.MenuRestaurant_Fragment;
 import com.example.eaters.Fragments.Profile_Fragment;
 import com.example.eaters.Fragments.Search_Fragment;
 import com.example.eaters.R;
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.cart:
-                    selectedFragment = new Cart_Fragment();
+                    selectedFragment = new MenuRestaurant_Fragment();
 
                     transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menucarrinho)).commit();
                     break;
