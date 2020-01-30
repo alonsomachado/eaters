@@ -89,7 +89,7 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
             preco = (TextView) itemView.findViewById(R.id.food_preco);
             nota = (TextView) itemView.findViewById(R.id.food_nota);
             ingredientes = (TextView) itemView.findViewById(R.id.food_ingredients);
-            background_img= itemView.findViewById(R.id.back_img_food);
+            background_img = itemView.findViewById(R.id.back_img_food);
 
             itemfood = itemView.findViewById(R.id.itemfood);
 

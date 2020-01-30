@@ -11,12 +11,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
@@ -57,6 +59,8 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
         ImageView back_img = holder.background_img;
         ImageView logo = holder.logo;
 
+        CardView restaurant = holder.restaurant;
+
         int id_back = mContext.getResources().getIdentifier(mListaRestaurants.get(position).getBack_img_rest(), "drawable", mContext.getPackageName());
         int id_logo = mContext.getResources().getIdentifier(mListaRestaurants.get(position).getLogo_path(), "drawable", mContext.getPackageName());
         Drawable drawable_back = mContext.getResources().getDrawable(id_back);
@@ -72,7 +76,14 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
         distance.setText(mListaRestaurants.get(position).getDistance());
         stars.setText(mListaRestaurants.get(position).getStars_review());
 
+        restaurant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+
+                Toast.makeText(mContext.getApplicationContext(),"Clicou no Restaurante: "+mListaRestaurants.get(position).getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -88,6 +99,7 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
 
         public TextView name, time_dis, stars_review, distance;
         public ImageView background_img, logo;
+        public CardView restaurant;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -98,6 +110,8 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
             distance = (TextView) itemView.findViewById(R.id.rest_distance);
             background_img= itemView.findViewById(R.id.back_img_rest);
             logo= itemView.findViewById(R.id.rest_logo);
+
+            restaurant = itemView.findViewById(R.id.restaurant);
 
 
 
