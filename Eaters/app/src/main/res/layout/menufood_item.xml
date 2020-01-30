@@ -16,8 +16,8 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/menutiponame"
-            android:layout_width="80dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"

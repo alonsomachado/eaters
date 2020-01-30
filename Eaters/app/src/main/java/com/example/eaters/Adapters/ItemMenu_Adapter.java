@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eaters.Classes.Food;
 import com.example.eaters.Classes.Restaurant;
@@ -55,18 +56,26 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
         TextView preco = holder.preco;
         TextView ingredientes = holder.ingredientes;
         TextView nota = holder.nota;
-        ImageView back_img = holder.background_img;
+        //ImageView back_img = holder.background_img;
         CardView itemfood = holder.itemfood;
 
-        int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
-        Drawable drawable_back = mContext.getResources().getDrawable(id_back);
+       // int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
+        //Drawable drawable_back = mContext.getResources().getDrawable(id_back);
 
-        back_img.setImageDrawable(drawable_back);
+        //back_img.setImageDrawable(drawable_back);
 
         name.setText(mListaFood.get(position).getName());
         preco.setText(mListaFood.get(position).getPreco());
         ingredientes.setText(mListaFood.get(position).getIngredientes());
         nota.setText(mListaFood.get(position).getNota());
+
+        itemfood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(mContext.getApplicationContext(),"Clicou na Comida: "+mListaFood.get(position).getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -89,7 +98,7 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
             preco = (TextView) itemView.findViewById(R.id.food_preco);
             nota = (TextView) itemView.findViewById(R.id.food_nota);
             ingredientes = (TextView) itemView.findViewById(R.id.food_ingredients);
-            background_img = itemView.findViewById(R.id.back_img_food);
+            //background_img = itemView.findViewById(R.id.back_img_food);
 
             itemfood = itemView.findViewById(R.id.itemfood);
 

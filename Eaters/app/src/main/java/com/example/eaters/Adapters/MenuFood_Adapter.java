@@ -16,16 +16,18 @@ import com.example.eaters.Classes.Food;
 import com.example.eaters.R;
 
 import java.util.List;
+import java.util.Vector;
 
 
 public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.ViewHolder> {
 
     private Context mContext;
-    private List<Food> mListaMenuTipos;
+    private List<Food> mListaMenuFoods;
+    private Vector<String> mListaMenuTipos = new Vector<String>();
 
-    public MenuFood_Adapter(Context mContext, List<Food> mListaMenuTipos) {
+    public MenuFood_Adapter(Context mContext, List<Food> mListaMenuFoods) {
         this.mContext = mContext;
-        this.mListaMenuTipos = mListaMenuTipos;
+        this.mListaMenuFoods = mListaMenuFoods;
     }
 
     @NonNull
@@ -43,18 +45,20 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
     @Override
     public void onBindViewHolder(@NonNull MenuFood_Adapter.ViewHolder holder, final int position) {
         //MaterialCardView itemPromo = holder.itemPromo;
-        //CardView itemMenuTipo = holder.itemMenuTipo;
+        CardView itemMenuTipo = holder.itemMenuTipo;
         TextView tipo = holder.tipo;
 
-        tipo.setText(mListaMenuTipos.get(position).getTipo());
+        mListaMenuTipos.add( mListaMenuFoods.get(position).getTipo() );
 
-        /*itemMenuTipo.setOnClickListener(new View.OnClickListener() {
+        tipo.setText(mListaMenuFoods.get(position).getTipo());
+
+        itemMenuTipo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(mContext.getApplicationContext(),"Clicou na Promocao "+mListaMenuTipos.get(position).getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext.getApplicationContext(),"Clicou no Tipo Comida: "+mListaMenuTipos.get(position),Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
 
     }
 

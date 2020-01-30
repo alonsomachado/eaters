@@ -19,17 +19,18 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
+            android:background="@mipmap/ic_launcher"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/food_name"
-            android:layout_width="185dp"
+            android:layout_width="wrap_content"
             android:layout_height="33dp"
-            android:layout_marginTop="24dp"
-            android:textColor="#000"
-            android:textSize="10pt"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/back_img_food"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,16 +40,22 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/food_ingredients"
+            app:layout_constraintTop_toBottomOf="@id/food_name"
             app:layout_constraintVertical_bias="0.0" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/food_ingredients"
-            android:layout_width="40dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/back_img_food"
+            android:layout_marginStart="115dp"
+            android:layout_marginLeft="115dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_star" />
 
         <android.support.v7.widget.AppCompatImageView
@@ -65,6 +72,7 @@
             android:id="@+id/food_nota"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/img_star"
             app:layout_constraintTop_toBottomOf="@+id/food_name" />
 
@@ -72,9 +80,13 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
             android:text="Preço:"
-            app:layout_constraintStart_toEndOf="@+id/back_img_food"
-            app:layout_constraintTop_toBottomOf="@+id/food_ingredients" />
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/food_nota"
+            app:layout_constraintTop_toBottomOf="@id/food_name" />
 
 
     </android.support.constraint.ConstraintLayout>
