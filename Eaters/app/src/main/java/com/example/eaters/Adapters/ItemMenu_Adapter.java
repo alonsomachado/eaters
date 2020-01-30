@@ -59,7 +59,7 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
         //ImageView back_img = holder.background_img;
         CardView itemfood = holder.itemfood;
 
-       // int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
+        //int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
         //Drawable drawable_back = mContext.getResources().getDrawable(id_back);
 
         //back_img.setImageDrawable(drawable_back);

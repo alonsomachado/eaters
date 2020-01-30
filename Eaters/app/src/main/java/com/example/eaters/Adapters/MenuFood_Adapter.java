@@ -15,6 +15,8 @@ import android.widget.Toast;
 import com.example.eaters.Classes.Food;
 import com.example.eaters.R;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
 
@@ -23,7 +25,7 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
 
     private Context mContext;
     private List<Food> mListaMenuFoods;
-    private Vector<String> mListaMenuTipos = new Vector<String>();
+    //private HashMap<String, Integer> mListaMenuTipos = new HashMap<String, Integer>();
 
     public MenuFood_Adapter(Context mContext, List<Food> mListaMenuFoods) {
         this.mContext = mContext;
@@ -44,11 +46,13 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull MenuFood_Adapter.ViewHolder holder, final int position) {
-        //MaterialCardView itemPromo = holder.itemPromo;
+
         CardView itemMenuTipo = holder.itemMenuTipo;
         TextView tipo = holder.tipo;
 
-        mListaMenuTipos.add( mListaMenuFoods.get(position).getTipo() );
+        //Tentando Resolver Categoria de Comida no MENU
+        //mListaMenuTipos.put( mListaMenuFoods.get(position).getTipo(), position );
+        //tipo.setText(mListaMenuFoods.get(position).getTipo());
 
         tipo.setText(mListaMenuFoods.get(position).getTipo());
 
@@ -56,7 +60,7 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(mContext.getApplicationContext(),"Clicou no Tipo Comida: "+mListaMenuTipos.get(position),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext.getApplicationContext(),"Clicou na Categoria de Comida: "+mListaMenuFoods.get(position).getTipo(),Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -64,7 +68,7 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
 
     @Override
     public int getItemCount() {
-        return mListaMenuTipos.size();
+        return mListaMenuFoods.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

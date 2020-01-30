@@ -222,9 +222,9 @@
          "id":"4",
          "name":"Taberna Belga",
          "description":"Taberna Belga - A melhor taberna do Norte de Portugal!",
-         "logo_path":"pizza_hut_logo",
+         "logo_path":"tabbelga",
          "back_img_path":"pizza_hut_back",
-         "resttipo":"Pizzaria",
+         "resttipo":"Restaurante",
          "time_distance":"10-20 min",
          "distance":"38 km",
          "food_list":[
