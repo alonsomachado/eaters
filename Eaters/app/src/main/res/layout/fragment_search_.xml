@@ -79,7 +79,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vegetarianos"
+                    android:src="@drawable/indiana"
                     android:transitionName="branco_transation" />
 
 
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vegetarianos"
+                    android:src="@drawable/mexicana"
                     android:transitionName="rose_transation" />
 
             </LinearLayout>
@@ -136,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vegetarianos"
+                    android:src="@drawable/portuguesa"
                     android:transitionName="espumante_transation" />
 
 
@@ -164,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vegetarianos"
+                    android:src="@drawable/sopas"
                     android:transitionName="porto_transation"/>
 
             </LinearLayout>
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/vegetarianos"
+                    android:src="@drawable/asiatica"
                     android:transitionName="digestivo_transation"/>
 
 
