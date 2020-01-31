@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.Fragments.MenuRestaurant_Fragment;
 import com.example.eaters.R;
@@ -31,11 +32,13 @@ import java.net.URL;
 import java.util.List;
 
 
+
 public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.ViewHolder> {
 
     //private OnItemClickListener listener;
     private Context mContext;
     private List<Restaurant> mListaRestaurants;
+    public FragmentManager fragmentManager;
 
     public Restaurant_Adapter(Context mContext, List<Restaurant> mListaDivisions) {
         this.mContext = mContext;
@@ -86,7 +89,15 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
             @Override
             public void onClick(View v) {
             Toast.makeText(mContext.getApplicationContext(),"Clicou no Restaurante: "+mListaRestaurants.get(position).getName(),Toast.LENGTH_SHORT).show();
-            //super.chamadamenu(mListaRestaurants.get(position));
+
+                MenuRestaurant_Fragment newFragment = new MenuRestaurant_Fragment();
+                FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
+
+                FragmentTransaction transaction=manager.beginTransaction();
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
             }
         });
 

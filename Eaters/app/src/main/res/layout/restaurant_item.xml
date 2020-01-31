@@ -34,8 +34,8 @@
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/rest_name"
-        android:layout_width="185dp"
-        android:layout_height="33dp"
+        android:layout_width="224dp"
+        android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:textColor="#000"
