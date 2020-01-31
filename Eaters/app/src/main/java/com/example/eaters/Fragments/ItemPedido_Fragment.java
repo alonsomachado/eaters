@@ -41,8 +41,8 @@ public class ItemPedido_Fragment extends Fragment {
         rv_acompanhamento.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        String restauranteDummyData = "Acompanhamento.json";
-        getAssetJsonData(getContext(), restauranteDummyData);
+        String acomDummyData = "Acompanhamento.json";
+        getAssetJsonData(getContext(), acomDummyData);
 
 
         return v;

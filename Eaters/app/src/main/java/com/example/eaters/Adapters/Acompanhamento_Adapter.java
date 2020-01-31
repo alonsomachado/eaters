@@ -46,13 +46,32 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
         TextView name = holder.name;
         TextView quantidade = holder.quantidade;
         ImageView logo = holder.logo;
+        ImageView minus = holder.minus;
+        ImageView add = holder.add;
+        String quant = mListaAcompanhamento.get(position).getQuantidade();
 
-        /*int id_logo = mContext.getResources().getIdentifier(mListaRestaurants.get(position).getLogo_path(), "drawable", mContext.getPackageName());
+        int id_logo = mContext.getResources().getIdentifier(mListaAcompanhamento.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
         Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
-        logo.setImageDrawable(drawable_logo);*/
+        logo.setImageDrawable(drawable_logo);
 
         name.setText(mListaAcompanhamento.get(position).getName());
-        quantidade.setText(mListaAcompanhamento.get(position).getQuantidade());
+
+        quantidade.setText(quant);
+
+        minus.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Toast.makeText(mContext.getApplicationContext(),"Retirou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+              }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext.getApplicationContext(),"Adicionou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         /*acompanhamento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +91,7 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView name, quantidade;
-        public ImageView logo;
+        public ImageView logo, minus, add;
         public CardView acompanhamento;
 
 
@@ -82,6 +101,8 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
             name = (TextView) itemView.findViewById(R.id.acompanhamentoname);
             quantidade = (TextView) itemView.findViewById(R.id.acompanhamentoqnt);
             logo = itemView.findViewById(R.id.acompanhamentoicon);
+            minus = itemView.findViewById(R.id.acompanhamentominus);
+            add = itemView.findViewById(R.id.acompanhamentoadd);
 
             acompanhamento = itemView.findViewById(R.id.itemAcompanhamento);
 
