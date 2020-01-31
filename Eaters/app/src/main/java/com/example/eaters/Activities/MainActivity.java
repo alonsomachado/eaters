@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.cart:
-                    selectedFragment = new ItemPedido_Fragment();
+                    selectedFragment = new Cart_Fragment();
 
                     transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menucarrinho)).commit();
                     break;
