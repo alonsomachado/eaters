@@ -59,10 +59,12 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
         //ImageView back_img = holder.background_img;
         CardView itemfood = holder.itemfood;
 
-        //int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
-        //Drawable drawable_back = mContext.getResources().getDrawable(id_back);
+        /*int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
 
-        //back_img.setImageDrawable(drawable_back);
+        Drawable drawable_back = mContext.getResources().getDrawable(id_back);
+        if (drawable_back != null) {
+            back_img.setImageDrawable(drawable_back);
+        }*/
 
         name.setText(mListaFood.get(position).getName());
         preco.setText(mListaFood.get(position).getPreco());
@@ -88,7 +90,7 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView name, preco, nota, ingredientes;
-        public ImageView background_img;
+        //public ImageView background_img;
         public CardView itemfood;
 
 
@@ -98,7 +100,7 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
             preco = (TextView) itemView.findViewById(R.id.food_preco);
             nota = (TextView) itemView.findViewById(R.id.food_nota);
             ingredientes = (TextView) itemView.findViewById(R.id.food_ingredients);
-            //background_img = itemView.findViewById(R.id.back_img_food);
+           //background_img = itemView.findViewById(R.id.back_img_food);
 
             itemfood = itemView.findViewById(R.id.itemfood);
 

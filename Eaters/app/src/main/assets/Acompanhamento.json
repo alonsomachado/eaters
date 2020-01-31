@@ -1,0 +1,20 @@
+[
+  {
+    "id":"1",
+    "name":"Refrigerante Coca-Cola",
+    "quantidade":"2",
+    "logo_path":"pizza_hut_back",
+  },
+  {
+    "id":"2",
+    "name":"Batata Frita",
+    "quantidade":"3",
+    "logo_path":"tabbelga",
+  },
+  {
+    "id":"3",
+    "name":"Salada",
+    "quantidade":"0",
+    "logo_path":"bk_logo",
+  }
+]
