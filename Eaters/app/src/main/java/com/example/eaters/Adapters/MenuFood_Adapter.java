@@ -4,6 +4,8 @@ import android.content.Context;;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Classes.Food;
+import com.example.eaters.Fragments.ItemPedido_Fragment;
+import com.example.eaters.Fragments.MenuRestaurant_Fragment;
 import com.example.eaters.R;
 
 import java.util.HashMap;
@@ -61,6 +66,10 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
             public void onClick(View v) {
 
                 Toast.makeText(mContext.getApplicationContext(),"Clicou na Categoria de Comida: "+mListaMenuFoods.get(position).getTipo(),Toast.LENGTH_SHORT).show();
+
+
+
+
             }
         });
 

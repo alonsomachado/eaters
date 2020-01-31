@@ -11,6 +11,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,8 +22,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Classes.Food;
 import com.example.eaters.Classes.Restaurant;
+import com.example.eaters.Fragments.ItemPedido_Fragment;
 import com.example.eaters.R;
 
 import java.lang.reflect.Field;
@@ -76,6 +80,14 @@ public class ItemMenu_Adapter extends RecyclerView.Adapter<ItemMenu_Adapter.View
             public void onClick(View v) {
 
                 Toast.makeText(mContext.getApplicationContext(),"Clicou na Comida: "+mListaFood.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+                ItemPedido_Fragment newFragment = new ItemPedido_Fragment();
+                FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
             }
         });
 
