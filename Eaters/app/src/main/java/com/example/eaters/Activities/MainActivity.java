@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eaters.Fragments.Cart_Fragment;
@@ -20,7 +21,7 @@ import com.example.eaters.R;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private TextView mToolbarTitle;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -41,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.navigation_home:
                     selectedFragment = new Main_Fragment();
-                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menuhome)).commit();
+                    transaction.replace(R.id.fragment_container, selectedFragment, getString(R.string.menuhome));
+                    transaction.commit();
                     break;
 
 
@@ -79,6 +81,20 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private void doFragmentTransaction(Fragment fragment, String tag, boolean addToBackStack, String message) {
+
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        Bundle bundle = new Bundle();
+        bundle.putString("key","value");
+        fragment.setArguments(bundle);
+
+        transaction.replace(R.id.fragment_container, fragment, tag);
+        if(addToBackStack){  transaction.addToBackStack(tag);}
+        transaction.commit();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,4 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Main_Fragment()).commit();
     }
+
+
 }

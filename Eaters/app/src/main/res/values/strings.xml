@@ -20,6 +20,7 @@
     <string name="menucarrinho">Carrinho</string>
     <string name="menuperfil">Perfil</string>
     <string name="promolabel">Promoções:</string>
+    <string name="menurestaurante">Restaurante X</string>
 
     <!-- Strings related to Pagamento -->
     <string name="pagamentoHeader">Formas de Pagamento</string>

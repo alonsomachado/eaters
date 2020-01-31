@@ -19,12 +19,17 @@ public class Cart_Fragment extends Fragment {
    private View v;
     RecyclerView rv_cart;
     Cart_Adapter fav_adapter;
+    private String mensagem = "";
 
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        /*Bundle bundle = getArguments();
+        if(bundle != null){ //Bundle tem alguma coisa
+            mensagem = bundle.getString();
+        }*/
 
         v = inflater.inflate(R.layout.fragment_cart_, container, false);
         rv_cart = v.findViewById(R.id.rv_cart);

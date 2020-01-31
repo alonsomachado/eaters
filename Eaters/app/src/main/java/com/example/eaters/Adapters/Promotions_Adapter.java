@@ -85,107 +85,12 @@ public class Promotions_Adapter extends RecyclerView.Adapter<Promotions_Adapter.
         });
 
     }
-    /*
-    @Override
-    public void onBindViewHolder(@NonNull Promotions_Adapter.ViewHolder holder, final int position) {
 
-        final TextView name = holder.nameDivision;
-        MaterialCardView item = holder.item;
-        ImageView delete = holder.delete;
-
-        final Bundle bundle = new Bundle();
-        bundle.putString("divisionId", mListaPromocao.get(position).getId());
-
-        item.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                FragmentManager fragmentManager = ((Inicial_Activity) mContext).getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.addToBackStack(null);
-                SensorsOfDivision_fragment fragment = new SensorsOfDivision_fragment();
-                fragment.setArguments(bundle);
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.commit();
-            }
-        });
-        name.setText(mListaPromocao.get(position).getName());
-
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                new AlertDialog.Builder(mContext)
-                        .setMessage("Remove division " + mListaPromocao.get(position).getName() + " ?")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                myRef.child(mListaPromocao.get(position).getId()).removeValue();
-
-
-                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                DatabaseReference myRef = database.getReference("Sensors");
-                                Query getSensorsByDivisonId = myRef.orderByChild("divisionId").equalTo(mListaPromocao.get(position).getId());
-
-
-                                getSensorsByDivisonId.addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                        if (dataSnapshot.exists()) {
-                                            for (DataSnapshot divisions : dataSnapshot.getChildren()) {
-                                                refSensors.child(divisions.getValue(Sensor.class).getIdentifier()).removeValue();
-                                                //   list_divisions.add(divisions.getValue(Door.class).getnSensorClass());
-                                            }
-
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                    }
-                                });
-
-                                FragmentManager fragmentManager = ((Inicial_Activity) mContext).getSupportFragmentManager();
-                                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                                fragmentTransaction.addToBackStack(null);
-                                Home_Fragment fragment = new Home_Fragment();
-                                fragment.setArguments(bundle);
-                                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                                fragmentTransaction.commit();
-
-                            }
-                        })
-                        .setNegativeButton("No", null)
-                        .show();
-
-            }
-        });
-
-
-    }*/
-
-    @Override
     public int getItemCount() {
         return mListaPromocao.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-     /*   public TextView nameDivision;
-     //   public MaterialCardView item;
-        public ImageView delete;
-
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            nameDivision = (TextView) itemView.findViewById(R.id.item_name);
-            item = itemView.findViewById(R.id.division_layout);
-            delete = itemView.findViewById(R.id.delete_div);
-
-
-        }
-    }*/
 
         public TextView name, description;
         public ImageView background_img;

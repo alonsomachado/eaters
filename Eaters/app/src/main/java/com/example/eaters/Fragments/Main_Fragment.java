@@ -3,6 +3,8 @@ package com.example.eaters.Fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -55,6 +57,16 @@ public class Main_Fragment extends Fragment {
 
         String promocaoDummyData = "Promocao_Data.json";
         getAssetPromoJsonData(getContext(), promocaoDummyData);
+
+        /*public void chamadamenu(Integer pos){
+            FragmentManager fragmentManager =  super.getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            MenuRestaurant_Fragment fragment = new MenuRestaurant_Fragment();
+            //fragment.setArguments(bundle);
+            fragmentTransaction.replace(R.id.fragment_container, fragment, getString(R.string.menurestaurante) );
+            fragmentTransaction.commit();
+        }*/
 
         return v;
     }
@@ -179,6 +191,29 @@ public class Main_Fragment extends Fragment {
         return json;
 
     }
+
+    /*public void chamadamenu(Fragment fragment, String tag){
+        FragmentManager fragmentManager =  super.getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        MenuRestaurant_Fragment fragment = new MenuRestaurant_Fragment();
+        //fragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.fragment_container, fragment, getString(R.string.menurestaurante) );
+        fragmentTransaction.commit();
+    }*/
+
+    /*rest_adapter.setOnItemClickListener(new Restaurant_Adapter.OnItemClickListener() {
+        @Override
+        public void onItemClick(int post) {
+
+            Intent intent = new Intent(MainActivity.this, AddEditNoteActivity.class);
+            intent.putExtra(AddEditNoteActivity.EXTRA_ID, note.getId());
+            intent.putExtra(AddEditNoteActivity.EXTRA_TITLE, note.getTitle());
+            intent.putExtra(AddEditNoteActivity.EXTRA_DESCRIPTION, note.getDescription());
+            intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITY, note.getPriority());
+            startActivityForResult(intent, EDIT_NOTE_REQUEST);
+        }
+    });*/
 
 
 }
