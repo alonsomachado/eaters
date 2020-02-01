@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void doFragmentTransaction(Fragment fragment, String tag, boolean addToBackStack, String message) {
+    /*private void doFragmentTransaction(Fragment fragment, String tag, boolean addToBackStack, String message) {
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment_container, fragment, tag);
         if(addToBackStack){  transaction.addToBackStack(tag);}
         transaction.commit();
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,5 +1,6 @@
 package com.example.eaters.Activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -111,6 +112,9 @@ public class SignUpActivity extends AppCompatActivity {
         editor.putString("pass", password);
         editor.putString("address", address.getText().toString());
         editor.commit();
+
+        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+        startActivity(intent);
 
     }
 

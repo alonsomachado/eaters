@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="Pagar pela aplicação"
         app:layout_constraintTop_toBottomOf="@+id/pagamentoTexto"
         tools:layout_editor_absoluteX="76dp" />
 
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="Pagar na entrega do pedido"
         app:layout_constraintTop_toBottomOf="@+id/pagamentoOp1divider"
         tools:layout_editor_absoluteX="76dp" />
 

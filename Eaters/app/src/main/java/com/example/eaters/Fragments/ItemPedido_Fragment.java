@@ -3,14 +3,18 @@ package com.example.eaters.Fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Adapters.Acompanhamento_Adapter;
-import com.example.eaters.Adapters.Favorites_Adapter;
 import com.example.eaters.Classes.Acompanhamento;
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
@@ -28,6 +32,7 @@ public class ItemPedido_Fragment extends Fragment {
     private View v;
     RecyclerView rv_acompanhamento;
     Acompanhamento_Adapter acom_adapter;
+    private Button btn_adicionar;
 
 
 
@@ -39,10 +44,27 @@ public class ItemPedido_Fragment extends Fragment {
         rv_acompanhamento = v.findViewById(R.id.rv_acompanhamento);
         rv_acompanhamento.setHasFixedSize(true);
         rv_acompanhamento.setLayoutManager(new LinearLayoutManager(getContext()));
+        btn_adicionar= v.findViewById(R.id.btn_adicionar);
 
 
         String acomDummyData = "Acompanhamento.json";
         getAssetJsonData(getContext(), acomDummyData);
+
+        btn_adicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Clicou em Adicionar! ",Toast.LENGTH_SHORT).show();
+                //mContext = getContext();
+                Cart_Fragment newFragment = new Cart_Fragment();
+                FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
+
+                FragmentTransaction transaction=manager.beginTransaction();
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+            }
+        });
 
 
         return v;

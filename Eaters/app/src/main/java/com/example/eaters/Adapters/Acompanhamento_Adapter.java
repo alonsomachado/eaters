@@ -50,11 +50,11 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
         ImageView add = holder.add;
         String quant = mListaAcompanhamento.get(position).getQuantidade();
 
+        name.setText(mListaAcompanhamento.get(position).getName());
+
         int id_logo = mContext.getResources().getIdentifier(mListaAcompanhamento.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
         Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
         logo.setImageDrawable(drawable_logo);
-
-        name.setText(mListaAcompanhamento.get(position).getName());
 
         quantidade.setText(quant);
 
@@ -77,7 +77,7 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(mContext.getApplicationContext(),"Clicou no Restaurante: "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext.getApplicationContext(),"Clicou no Acompanhamento: "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
             }
         });*/
 
