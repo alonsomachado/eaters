@@ -10,13 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.eaters.Adapters.ItemMenu_Adapter;
 import com.example.eaters.Adapters.MenuFood_Adapter;
-import com.example.eaters.Adapters.Promotions_Adapter;
-import com.example.eaters.Adapters.Restaurant_Adapter;
+import com.example.eaters.Adapters.MenuFoodCategory_Adapter;
 import com.example.eaters.Classes.Food;
-import com.example.eaters.Classes.Promocao;
-import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
 
 import org.json.JSONArray;
@@ -26,17 +22,16 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 
 public class MenuRestaurant_Fragment extends Fragment {
 
     private View v;
     RecyclerView rv_food;
-    ItemMenu_Adapter food_adapter;
+    MenuFood_Adapter food_adapter;
 
     RecyclerView rv_menufood;
-    MenuFood_Adapter menu_adapter;
+    MenuFoodCategory_Adapter menu_adapter;
 
 
     @Override
@@ -97,7 +92,7 @@ public class MenuRestaurant_Fragment extends Fragment {
 
             }
             //Foods in the RV
-            food_adapter = new ItemMenu_Adapter(context, foods);
+            food_adapter = new MenuFood_Adapter(context, foods);
             rv_food.setAdapter(food_adapter);
 
         } catch (IOException ex) {
@@ -146,7 +141,7 @@ public class MenuRestaurant_Fragment extends Fragment {
             }
 
             //Types of Foods for the Other RV
-            menu_adapter = new MenuFood_Adapter(context, foodmenu);
+            menu_adapter = new MenuFoodCategory_Adapter(context, foodmenu);
             rv_menufood.setAdapter(menu_adapter);
 
 

@@ -16,6 +16,7 @@ import com.example.eaters.Fragments.Favorites_Fragment;
 import com.example.eaters.Fragments.ItemPedido_Fragment;
 import com.example.eaters.Fragments.Main_Fragment;
 import com.example.eaters.Fragments.MenuRestaurant_Fragment;
+import com.example.eaters.Fragments.Pagamento_Fragment;
 import com.example.eaters.Fragments.Profile_Fragment;
 import com.example.eaters.Fragments.Search_Fragment;
 import com.example.eaters.R;

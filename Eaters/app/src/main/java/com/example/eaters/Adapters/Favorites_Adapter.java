@@ -5,6 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +16,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Classes.Restaurant;
+import com.example.eaters.Fragments.MenuRestaurant_Fragment;
+import com.example.eaters.Fragments.Pagamento_Fragment;
 import com.example.eaters.R;
 
 import java.util.List;
@@ -61,6 +66,15 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
             public void onClick(View v) {
 
                 Toast.makeText(mContext.getApplicationContext(),"Clicou no Restaurante: "+mListaRestaurants.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+                MenuRestaurant_Fragment newFragment = new MenuRestaurant_Fragment();
+                FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
+                //FragmentManager manager = (getActivity().getSupportFragmentManager());
+
+                FragmentTransaction transaction=manager.beginTransaction();
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
@@ -76,7 +90,7 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name, resttipo, nota, distance;
+        public TextView name, resttipo, nota;
         public ImageView logo;
         public CardView favorit;
 

@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Adapters.Cart_Adapter;
-import com.example.eaters.Adapters.Favorites_Adapter;
 import com.example.eaters.R;
 
 public class Cart_Fragment extends Fragment {
@@ -48,8 +47,9 @@ public class Cart_Fragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Selecione o Meio de Pagamento! ",Toast.LENGTH_SHORT).show();
                 //mContext = getContext();
-                Cart_Fragment newFragment = new Cart_Fragment();
-                FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
+                Pagamento_Fragment newFragment = new Pagamento_Fragment();
+                //FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
+                FragmentManager manager = (getActivity().getSupportFragmentManager());
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);

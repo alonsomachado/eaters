@@ -56,7 +56,8 @@ public class ItemPedido_Fragment extends Fragment {
                 Toast.makeText(getContext(),"Clicou em Adicionar! ",Toast.LENGTH_SHORT).show();
                 //mContext = getContext();
                 Cart_Fragment newFragment = new Cart_Fragment();
-                FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
+                //FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
+                FragmentManager manager = (getActivity().getSupportFragmentManager());
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
