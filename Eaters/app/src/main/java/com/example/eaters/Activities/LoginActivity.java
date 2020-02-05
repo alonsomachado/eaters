@@ -16,6 +16,7 @@ import com.example.eaters.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private String person_name, person_pass;
     private Button btn_login, btn_sign_up;
     private EditText name, pass ;
 
@@ -46,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void attemptSignIn(String nEmail, String nPass) {
+    public void attemptSignIn(String nName, String nPass) {
 
         name.setError(null);
         pass.setError(null);
@@ -64,11 +65,11 @@ public class LoginActivity extends AppCompatActivity {
             cancel = true;
         }
 
-        if (TextUtils.isEmpty(nEmail)) {
+        if (TextUtils.isEmpty(nName)) {
             name.setError("Nome Obrigatorio");
             focusView = name;
             cancel = true;
-        } else if (!isEmailValid(nEmail)) {
+        } else if (!isUsernameValid(nName)) {
             name.setError("Nome Invalido");
             focusView = name;
             cancel = true;
@@ -81,9 +82,9 @@ public class LoginActivity extends AppCompatActivity {
 
         } else {
 
-            Toast.makeText(LoginActivity.this, "Bem vindo ", Toast.LENGTH_LONG).show();
+            //Toast.makeText(LoginActivity.this, "Bem vindo ", Toast.LENGTH_LONG).show();
 
-            sign_in(nEmail, nPass);
+            sign_in(nName, nPass);
         }
     }
 
@@ -92,18 +93,28 @@ public class LoginActivity extends AppCompatActivity {
         return password.length() > 5;
     }
 
-    private boolean isEmailValid(String email) {
+    private boolean isUsernameValid(String user) {
 
-        return email.length()>4;
+        return user.length()>4;
     }
 
     public void sign_in(String name, String password) {
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
-        String person_name = settings.getString("name", "");
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        //SharedPreferences.Editor editor = settings.edit();
+        //editor.putString("name", name);
+        //editor.commit();
 
-        startActivity(intent);
+        person_name = settings.getString("name", "");
+        person_pass = settings.getString("pass", "");
+
+        if (name == person_name && password == person_pass) {
+
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }else {
+            Toast.makeText(LoginActivity.this, "Confira Username e Password! ", Toast.LENGTH_SHORT).show();
+        }
     }
 }

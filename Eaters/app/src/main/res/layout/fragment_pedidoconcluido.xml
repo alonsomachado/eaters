@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/pedidoConcluidoHeader"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28dp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,26 +23,53 @@
         android:id="@+id/pedidoconcluidotext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/pedidoConcluidoText"
         android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidoheader" />
 
     <TextView
-        android:id="@+id/pedidoconcluidoop1"
+        android:id="@+id/pedidoconcluidodetalhes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/pedidoConcluidoText"
+        android:layout_marginTop="8dp"
+        android:text="Detalhes do Pedido"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidotext" />
 
+    <TextView
+        android:id="@+id/pedidoconcluidonumero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="#00002"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/pedidoconcluidodetalhes"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidotext" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_pedidoconcluido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_action"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidodetalhes" />
+
     <View
-        android:id="@+id/pedidoconcluidoop1divider"
+        android:id="@+id/pedidoconcluido1divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:layout_marginStart="16dp"
@@ -49,9 +77,311 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/colorText"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidoop1" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_pedidoconcluido" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pedidoconcluidoadress_addresscard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluido1divider"
+        tools:layout_editor_absoluteX="2dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/pedidoconcluidoadress_location"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/locationicon"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidoadress_address"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/pedidoconcluidoadress_location"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidoadress_info" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidoadress_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginLeft="116dp"
+                android:layout_marginTop="8dp"
+                android:text="O Pedido será entregue em:"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/pedidoconcluido2divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidoadress_addresscard" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pedidoconcluidomeiopagamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluido2divider">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/pedidoconcluidomeiopagamento_img"
+                android:layout_width="53dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/mastercard_logo0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidomeiopagamento_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Cartão Crédito / Débito"
+                android:textColor="#000"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/pedidoconcluidomeiopagamento_img"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidomeiopagamento_desc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="**** 8856"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pedidoconcluidomeiopagamento_img"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidomeiopagamento_label"
+                app:layout_constraintVertical_bias="0.055" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/pedidoconcluido3divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidomeiopagamento" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pedidoconcluidopagamento"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/pedidoconcluido3divider">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_sub_label"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Subtotal: "
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_sub"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pedidoconcluidopagamento_sub_pricesimbol"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_sub_pricesimbol"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:text="€"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_desc_label"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Desconto: "
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_sub_label" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_desc"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pedidoconcluidopagamento_desc_pricesimbol"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_sub" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_desc_pricesimbol"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:text="€"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_sub_pricesimbol" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_delivery_label"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Taxa de Entrega: "
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_desc_label" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_delivery"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pedidoconcluidopagamento_delivery_pricesimbol"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_desc" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_delivery_pricesimbol"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:text="€"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_desc_pricesimbol" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_total_label"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Total: "
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_delivery_label" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_total"
+                android:layout_width="33dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/pedidoconcluidopagamento_total_pricesimbol"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_delivery" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/pedidoconcluidopagamento_total_pricesimbol"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:text="€"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pedidoconcluidopagamento_delivery_pricesimbol" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

@@ -40,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    public void attemptSignup(String nEmail, String nPass) {
+    public void attemptSignup(String nUsername, String nPass) {
 
         name.setError(null);
         pass.setError(null);
@@ -59,17 +59,17 @@ public class SignUpActivity extends AppCompatActivity {
             cancel = true;
         }
 
-        if (TextUtils.isEmpty(nEmail)) {
+        if (TextUtils.isEmpty(nUsername)) {
             name.setError("Nome Obrigatorio");
             focusView = name;
             cancel = true;
-        } else if (!isEmailValid(nEmail)) {
+        } else if (!isUsernameValid(nUsername)) {
             name.setError("Nome Invalido");
             focusView = name;
             cancel = true;
         }
 
-        if (isEqualsPass()) {
+        if (!isEqualsPass()) {
             pass_confirm.setError("Passes diferentes");
             focusView = pass_confirm;
             cancel = true;
@@ -79,12 +79,8 @@ public class SignUpActivity extends AppCompatActivity {
         if (cancel) {
 
             focusView.requestFocus();
-
-        } else {
-
-
-
-            sign_up(nEmail, nPass);
+        }else{
+            sign_up(nUsername, nPass);
         }
     }
 
@@ -92,9 +88,9 @@ public class SignUpActivity extends AppCompatActivity {
         return password.length() > 5;
     }
 
-    private boolean isEmailValid(String email) {
+    private boolean isUsernameValid(String username) {
 
-        return email.length()>4;
+        return username.length()>4;
     }
 
     private boolean isEqualsPass () {

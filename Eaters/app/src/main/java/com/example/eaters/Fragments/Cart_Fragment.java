@@ -1,8 +1,10 @@
 package com.example.eaters.Fragments;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eaters.Activities.MainActivity;
@@ -25,6 +28,9 @@ public class Cart_Fragment extends Fragment {
     Cart_Adapter fav_adapter;
     private Button btn_action;
     private String mensagem = "";
+    private TextView address;
+
+
 
 
 
@@ -36,11 +42,17 @@ public class Cart_Fragment extends Fragment {
             mensagem = bundle.getString();
         }*/
 
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String person_adress = settings.getString("address", "");
+
         v = inflater.inflate(R.layout.fragment_cart_, container, false);
         rv_cart = v.findViewById(R.id.rv_cart);
         rv_cart.setHasFixedSize(true);
         rv_cart.setLayoutManager(new LinearLayoutManager(getContext()));
         btn_action = v.findViewById(R.id.btn_action);
+        address = v.findViewById(R.id.cart_address);
+
+        address.setText(person_adress);
 
         btn_action.setOnClickListener(new View.OnClickListener() {
             @Override
