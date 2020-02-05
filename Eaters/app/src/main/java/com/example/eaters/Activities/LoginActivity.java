@@ -109,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
         person_name = settings.getString("name", "");
         person_pass = settings.getString("pass", "");
 
-        if (name == person_name && password == person_pass) {
+        if ( name.equalsIgnoreCase(person_name)  && password.equalsIgnoreCase(person_pass) ) {
 
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);

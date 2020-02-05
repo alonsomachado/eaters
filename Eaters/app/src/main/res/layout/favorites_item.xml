@@ -20,6 +20,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:background="@mipmap/ic_launcher"
+            android:contentDescription="Restaurante Logo"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
