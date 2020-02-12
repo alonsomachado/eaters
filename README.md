@@ -6,6 +6,11 @@ Um app android Nativo, de entrega de comida.
 Focado em design e navegação, muitos Recyclerviews
 Pensado para usuários com visão normal e também daltônicos (deutetonomalia, tritanotopia)...
 
+![](Images/Analise_Dalt.png)
+
+![](Images/Dalt_Home1.png)
+![](Images/Dalt_Home2.png)
+
 Concepção de layout e protótipo: 
 https://xd.adobe.com/view/6b795fa0-a4b9-4f4e-6af0-9f45bf9c54f1-1d48/
 
