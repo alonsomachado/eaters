@@ -8,8 +8,8 @@ Pensado para usuários com visão normal e também daltônicos (deutetonomalia, 
 
 <img src="Images/Analise_Dalt.PNG">
 
-<img src="Images/Dalt_Home1.png">
-<img src="Images/Dalt_Home2.png">
+<img src="Images/Dalt_Home1.PNG">
+<img src="Images/Dalt_Home2.PNG">
 
 Concepção de layout e protótipo: 
 https://xd.adobe.com/view/6b795fa0-a4b9-4f4e-6af0-9f45bf9c54f1-1d48/
