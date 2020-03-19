@@ -17,8 +17,7 @@ import com.example.eaters.R;
 
 
 public class Dialog_TrocoPagamento extends AppCompatDialogFragment {
-    private EditText editTextUsername;
-    private EditText editTextPassword;
+    private EditText editValor;
     private ExampleDialogListener listener;
 
     @Override
@@ -32,8 +31,8 @@ public class Dialog_TrocoPagamento extends AppCompatDialogFragment {
         //AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
-        editTextUsername = view.findViewById(R.id.edit_username);
-        editTextPassword = view.findViewById(R.id.edit_password);
+        editValor = view.findViewById(R.id.dialog_edit_valor);
+
 
         builder.setView(view)
                 .setTitle("Troco")
@@ -46,9 +45,8 @@ public class Dialog_TrocoPagamento extends AppCompatDialogFragment {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        String username = editTextUsername.getText().toString();
-                        String password = editTextPassword.getText().toString();
-                        listener.applyTexts(username, password);
+                        String diag_valor = editValor.getText().toString();
+                        listener.applyTexts(diag_valor);
                         //getDialog().dismiss();
                     }
                 });
@@ -70,6 +68,6 @@ public class Dialog_TrocoPagamento extends AppCompatDialogFragment {
     }
 
     public interface ExampleDialogListener{
-        void applyTexts(String username, String password);
+        void applyTexts(String diag_valor);
     }
 }

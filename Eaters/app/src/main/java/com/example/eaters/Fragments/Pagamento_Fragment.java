@@ -1,8 +1,7 @@
 package com.example.eaters.Fragments;
 
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eaters.Activities.MainActivity;
+import com.example.eaters.Activities.ProgressBarActivity;
 import com.example.eaters.Dialogs.Dialog_TrocoPagamento;
 import com.example.eaters.R;
 
@@ -21,8 +21,7 @@ public class Pagamento_Fragment extends Fragment implements Dialog_TrocoPagament
 
     View v;
     private TextView name;
-    private TextView textViewUsername;
-    private TextView textViewPassword;
+    private TextView textViewValor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,10 +32,7 @@ public class Pagamento_Fragment extends Fragment implements Dialog_TrocoPagament
         CardView pagcash = v.findViewById(R.id.pagamentoEntrega_cash);
         CardView pagpos = v.findViewById(R.id.pagamentoEntrega_pos);
 
-        textViewUsername = v.findViewById(R.id.pagamentoApplabel);
-        textViewPassword = v.findViewById(R.id.pagamentoEntregalabel);
-
-        //name= v.findViewById(R.id.profile_name);
+        textViewValor = v.findViewById(R.id.pagamentoEntrega_cash_valor);
 
         //SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getActivity());
         //String person_name = settings.getString("name", "");
@@ -69,16 +65,27 @@ public class Pagamento_Fragment extends Fragment implements Dialog_TrocoPagament
     }
 
     public void openDialog() {
-        Dialog_TrocoPagamento exampleDialog = new Dialog_TrocoPagamento();
-        exampleDialog.setTargetFragment(Pagamento_Fragment.this, 1);
-        //exampleDialog.show(((MainActivity)getContext()).getSupportFragmentManager(), "example dialog");
-        exampleDialog.show(getFragmentManager(), "example dialog");
+        if (textViewValor.getVisibility() == View.VISIBLE) {
+            //changeFragment();
+
+            Intent intent = new Intent(getActivity(), ProgressBarActivity.class);;
+            int i = 19;
+            getActivity().startActivityFromFragment(this,intent,i);
+            //chamadaProgress();
+        } else { //View.GONE (Valor de pagamento em espécie não está aparecendo)
+            Dialog_TrocoPagamento myDialog = new Dialog_TrocoPagamento();
+
+            myDialog.setTargetFragment(Pagamento_Fragment.this, 1);
+            //exampleDialog.show(((MainActivity)getContext()).getSupportFragmentManager(), "example dialog");
+            myDialog.show(getFragmentManager(), "Meu dialog");
+        }
+
     }
 
     @Override
-    public void applyTexts(String username, String password) {
-        textViewUsername.setText(username);
-        textViewPassword.setText(password);
+    public void applyTexts(String valor) {
+        textViewValor.setText(valor);
+        textViewValor.setVisibility(View.VISIBLE);
     }
 
     public void changeFragment() {

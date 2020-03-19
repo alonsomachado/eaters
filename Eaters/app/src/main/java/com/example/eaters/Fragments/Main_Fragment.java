@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Adapters.Promotions_Adapter;
 import com.example.eaters.Adapters.Restaurant_Adapter;
 import com.example.eaters.Classes.Promocao;

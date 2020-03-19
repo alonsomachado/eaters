@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.blankActivity"></activity>
+        <activity android:name=".Activities.blankActivity"/>
         <activity android:name=".Activities.Launch_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.SignUpActivity" />
-        <activity android:name=".Activities.LoginActivity"></activity>
+        <activity android:name=".Activities.LoginActivity"/>
         <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.ProgressBarActivity" />
     </application>
 
 </manifest>

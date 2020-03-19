@@ -1,22 +1,19 @@
 package com.example.eaters.Activities;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.eaters.Fragments.Cart_Fragment;
 import com.example.eaters.Fragments.Favorites_Fragment;
-import com.example.eaters.Fragments.ItemPedido_Fragment;
 import com.example.eaters.Fragments.Main_Fragment;
-import com.example.eaters.Fragments.MenuRestaurant_Fragment;
-import com.example.eaters.Fragments.Pagamento_Fragment;
 import com.example.eaters.Fragments.Profile_Fragment;
 import com.example.eaters.Fragments.Search_Fragment;
 import com.example.eaters.R;

@@ -5,18 +5,38 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/dialog_label_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valor da Compra:" />
+
+    <TextView
+        android:id="@+id/text_valor_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorActionBt"
+        android:hint="€" />
+
     <EditText
-        android:id="@+id/edit_username"
+        android:id="@+id/dialog_edit_valor"
         android:minWidth="250dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="Valor em espécie para troco" />
 
-    <EditText
-        android:id="@+id/edit_password"
+    <TextView
+        android:id="@+id/dialog_label_troco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="Total de Troco a receber" />
 
+    <TextView
+        android:id="@+id/text_valor_troco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:hint="€" />
 </LinearLayout>

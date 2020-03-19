@@ -12,7 +12,7 @@ import com.example.eaters.R;
 
 public class Launch_Activity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 1200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,7 @@ public class Launch_Activity extends AppCompatActivity {
                 //Do any action here. Now we are moving to next page
                 Intent mySuperIntent = new Intent(Launch_Activity.this, LoginActivity.class);
                 startActivity(mySuperIntent);
-                /* This 'finish()' is for exiting the app when back button pressed
-                 *  from Home page which is ActivityHome
-                 */
+                /* This 'finish()' is for exiting the app when back button pressed from Home page */
                 finish();
             }
         }, SPLASH_TIME_OUT);
