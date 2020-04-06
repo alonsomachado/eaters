@@ -2,6 +2,7 @@ package com.example.eaters.Adapters;
 
 import android.content.Context;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
@@ -71,6 +72,11 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
                 Toast.makeText(mContext.getApplicationContext(),"Clicou na Comida: "+mListaFood.get(position).getName(),Toast.LENGTH_SHORT).show();
 
                 ItemPedido_Fragment newFragment = new ItemPedido_Fragment();
+
+                Bundle args = new Bundle();
+                args.putString("nomePizza", mListaFood.get(position).getName());
+                newFragment.setArguments(args);
+
                 FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);

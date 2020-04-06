@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eaters.Adapters.MenuFood_Adapter;
 import com.example.eaters.Adapters.MenuFoodCategory_Adapter;
@@ -27,11 +29,13 @@ import java.util.ArrayList;
 public class MenuRestaurant_Fragment extends Fragment {
 
     private View v;
+
+    TextView nome;
     RecyclerView rv_food;
     MenuFood_Adapter food_adapter;
 
-    RecyclerView rv_menufood;
-    MenuFoodCategory_Adapter menu_adapter;
+    RecyclerView rv_foodcategory;
+    MenuFoodCategory_Adapter foodcategory_adapter;
 
 
     @Override
@@ -44,13 +48,21 @@ public class MenuRestaurant_Fragment extends Fragment {
         rv_food.setHasFixedSize(true);
         rv_food.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        nome = (TextView) v.findViewById(R.id.menufoodlabel);
+
+        Bundle bundlerecebido = this.getArguments();
+        if( bundlerecebido != null ) {
+            String valorRecebido = bundlerecebido.getString("nomeRestaurant");
+            nome.setText(valorRecebido);
+            //Toast.makeText(getContext(), "Recebeu:  " + valorRecebido, Toast.LENGTH_SHORT).show();
+        }
 
         String foodDummyData = "Food_Data.json";
         getAssetJsonData(getContext(), foodDummyData);
 
-        rv_menufood = v.findViewById(R.id.rv_menufood);
-        rv_menufood.setHasFixedSize(true);
-        rv_menufood.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        rv_foodcategory = v.findViewById(R.id.rv_menucategoryfood);
+        rv_foodcategory.setHasFixedSize(true);
+        rv_foodcategory.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         getAssetTipoJsonData(getContext(), foodDummyData);
 
@@ -141,8 +153,8 @@ public class MenuRestaurant_Fragment extends Fragment {
             }
 
             //Types of Foods for the Other RV
-            menu_adapter = new MenuFoodCategory_Adapter(context, foodmenu);
-            rv_menufood.setAdapter(menu_adapter);
+            foodcategory_adapter = new MenuFoodCategory_Adapter(context, foodmenu);
+            rv_foodcategory.setAdapter(foodcategory_adapter);
 
 
         } catch (IOException ex) {

@@ -46,6 +46,12 @@ public class ItemPedido_Fragment extends Fragment {
         rv_acompanhamento.setLayoutManager(new LinearLayoutManager(getContext()));
         btn_adicionar= v.findViewById(R.id.btn_adicionar);
 
+        Bundle bundlerecebido = this.getArguments();
+        if( bundlerecebido != null ) {
+            String valorRecebido = bundlerecebido.getString("nomePizza");
+            Toast.makeText(getContext(), "Recebeu:  " + valorRecebido, Toast.LENGTH_SHORT).show();
+        }
+
 
         String acomDummyData = "Acompanhamento.json";
         getAssetJsonData(getContext(), acomDummyData);
@@ -58,6 +64,10 @@ public class ItemPedido_Fragment extends Fragment {
                 Cart_Fragment newFragment = new Cart_Fragment();
                 //FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
                 FragmentManager manager = (getActivity().getSupportFragmentManager());
+
+                Bundle args = new Bundle();
+                args.putString("chave", "valor");
+                newFragment.setArguments(args);
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);

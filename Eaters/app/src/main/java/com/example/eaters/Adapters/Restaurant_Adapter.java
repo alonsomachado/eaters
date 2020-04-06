@@ -93,6 +93,10 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
                 MenuRestaurant_Fragment newFragment = new MenuRestaurant_Fragment();
                 FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
 
+                Bundle args = new Bundle();
+                args.putString("nomeRestaurant", mListaRestaurants.get(position).getName() );
+                newFragment.setArguments(args);
+
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
                 transaction.addToBackStack(null);

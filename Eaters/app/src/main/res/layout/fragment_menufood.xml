@@ -8,7 +8,7 @@
     tools:context=".Fragments.MenuRestaurant_Fragment" >
 
     <TextView
-        android:id="@+id/foodlabel"
+        android:id="@+id/menufoodlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,20 +18,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_menufood"
+        android:id="@+id/rv_menucategoryfood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
 
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/foodlabel" />
+        app:layout_constraintTop_toBottomOf="@+id/menufoodlabel" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_food"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/rv_menufood" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_menucategoryfood" />
 
 
 </android.support.constraint.ConstraintLayout>
