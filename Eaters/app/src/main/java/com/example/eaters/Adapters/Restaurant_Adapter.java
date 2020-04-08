@@ -40,9 +40,9 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
     private List<Restaurant> mListaRestaurants;
     public FragmentManager fragmentManager;
 
-    public Restaurant_Adapter(Context mContext, List<Restaurant> mListaDivisions) {
+    public Restaurant_Adapter(Context mContext, List<Restaurant> mListaRestaurants) {
         this.mContext = mContext;
-        this.mListaRestaurants = mListaDivisions;
+        this.mListaRestaurants = mListaRestaurants;
     }
 
     @NonNull
@@ -92,9 +92,11 @@ public class Restaurant_Adapter extends RecyclerView.Adapter<Restaurant_Adapter.
 
                 MenuRestaurant_Fragment newFragment = new MenuRestaurant_Fragment();
                 FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
-
+                Restaurant mRestaurant = mListaRestaurants.get(position);
                 Bundle args = new Bundle();
                 args.putString("nomeRestaurant", mListaRestaurants.get(position).getName() );
+                args.putParcelable("Restaurant", mRestaurant);
+
                 newFragment.setArguments(args);
 
                 FragmentTransaction transaction=manager.beginTransaction();

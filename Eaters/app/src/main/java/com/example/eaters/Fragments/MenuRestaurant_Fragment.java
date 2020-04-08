@@ -1,20 +1,24 @@
 package com.example.eaters.Fragments;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.eaters.Adapters.MenuFood_Adapter;
 import com.example.eaters.Adapters.MenuFoodCategory_Adapter;
 import com.example.eaters.Classes.Food;
+import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
 
 import org.json.JSONArray;
@@ -24,6 +28,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MenuRestaurant_Fragment extends Fragment {
@@ -37,6 +42,17 @@ public class MenuRestaurant_Fragment extends Fragment {
     RecyclerView rv_foodcategory;
     MenuFoodCategory_Adapter foodcategory_adapter;
 
+    TextView res_name;
+    TextView res_time_dis;
+    TextView res_distance;
+    TextView res_stars_review;
+    TextView res_resttipo;
+    ImageView res_background_img;
+    ImageView res_logo;
+
+    CardView res_restaurant;
+    Restaurant mRestaurant;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,12 +64,37 @@ public class MenuRestaurant_Fragment extends Fragment {
         rv_food.setHasFixedSize(true);
         rv_food.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        nome = (TextView) v.findViewById(R.id.menufoodlabel);
+        res_name = (TextView) v.findViewById(R.id.menufood_restaurantlabel);
+        res_time_dis = (TextView) v.findViewById(R.id.menufood_rest_time);
+        res_stars_review = (TextView) v.findViewById(R.id.menufood_stars_num);
+        res_distance = (TextView) v.findViewById(R.id.menufood_rest_distance);
+        res_background_img = v.findViewById(R.id.menufood_back_img_rest);
+        res_logo = v.findViewById(R.id.menufood_rest_logo);
+        res_resttipo = (TextView) v.findViewById(R.id.menufood_resttipo);
+        res_restaurant = v.findViewById(R.id.menufood_restaurant);
+
+
 
         Bundle bundlerecebido = this.getArguments();
         if( bundlerecebido != null ) {
             String valorRecebido = bundlerecebido.getString("nomeRestaurant");
-            nome.setText(valorRecebido);
+            mRestaurant = (Restaurant) bundlerecebido.get("Restaurant");
+            res_name.setText(valorRecebido);
+
+            int id_back =getContext().getResources().getIdentifier(mRestaurant.getBack_img_rest(), "drawable", getContext().getPackageName());
+            int id_logo = getContext().getResources().getIdentifier(mRestaurant.getLogo_path(), "drawable", getContext().getPackageName());
+            Drawable drawable_back = getContext().getResources().getDrawable(id_back);
+            Drawable drawable_logo = getContext().getResources().getDrawable(id_logo);
+
+
+            res_background_img.setImageDrawable(drawable_back);
+            res_logo.setImageDrawable(drawable_logo);
+
+            res_name.setText(mRestaurant.getName());
+            res_time_dis.setText(mRestaurant.getTime_distance());
+            res_distance.setText(mRestaurant.getDistance());
+            res_stars_review.setText(mRestaurant.getStars_review());
+            res_resttipo.setText(mRestaurant.getResttipo());
             //Toast.makeText(getContext(), "Recebeu:  " + valorRecebido, Toast.LENGTH_SHORT).show();
         }
 

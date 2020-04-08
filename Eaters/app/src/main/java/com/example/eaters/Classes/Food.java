@@ -1,6 +1,9 @@
 package com.example.eaters.Classes;
 
-public class Food {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Food implements Parcelable {
 
     private String id;
     private String name;
@@ -23,6 +26,29 @@ public class Food {
         this.tipo = tipo;
     }
 
+
+    protected Food(Parcel in) {
+        id = in.readString();
+        name = in.readString();
+        ingredientes = in.readString();
+        back_img_food = in.readString();
+        rest_logo = in.readString();
+        preco = in.readString();
+        nota = in.readString();
+        tipo = in.readString();
+    }
+
+    public static final Creator<Food> CREATOR = new Creator<Food>() {
+        @Override
+        public Food createFromParcel(Parcel in) {
+            return new Food(in);
+        }
+
+        @Override
+        public Food[] newArray(int size) {
+            return new Food[size];
+        }
+    };
 
     public String getBack_img_food() {
         return back_img_food;
@@ -82,5 +108,22 @@ public class Food {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(name);
+        dest.writeString(ingredientes);
+        dest.writeString(back_img_food);
+        dest.writeString(rest_logo);
+        dest.writeString(preco);
+        dest.writeString(nota);
+        dest.writeString(tipo);
     }
 }

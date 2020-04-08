@@ -72,9 +72,11 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
                 Toast.makeText(mContext.getApplicationContext(),"Clicou na Comida: "+mListaFood.get(position).getName(),Toast.LENGTH_SHORT).show();
 
                 ItemPedido_Fragment newFragment = new ItemPedido_Fragment();
+                Food mFood = mListaFood.get(position);
 
                 Bundle args = new Bundle();
                 args.putString("nomePizza", mListaFood.get(position).getName());
+                args.putParcelable("Food", mFood);
                 newFragment.setArguments(args);
 
                 FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();

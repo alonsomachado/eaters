@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!--
+
     <android.support.v7.widget.CardView
-        android:id="@+id/itemfood"
+        android:id="@+id/pedido_itemfood"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_margin="2dp"
@@ -22,7 +22,7 @@
 
 
             <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/back_img_food"
+                android:id="@+id/pedido_back_img_food"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
@@ -34,17 +34,17 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/food_name"
+                android:id="@+id/pedido_food_name"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:layout_marginTop="8dp"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/back_img_food"
+                app:layout_constraintStart_toEndOf="@+id/pedido_back_img_food"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/food_preco"
+                android:id="@+id/pedido_food_preco"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -52,12 +52,12 @@
                 android:textColor="@color/colorText"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@id/food_name"
+                app:layout_constraintStart_toEndOf="@+id/pedido_food_precolabel"
+                app:layout_constraintTop_toBottomOf="@id/pedido_food_name"
                 app:layout_constraintVertical_bias="0.0" />
 
             <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/food_ingredients"
+                android:id="@+id/pedido_food_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="115dp"
@@ -65,28 +65,28 @@
                 android:textColor="@color/colorText"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_star" />
+                app:layout_constraintTop_toBottomOf="@+id/pedido_img_star" />
 
             <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/img_star"
+                android:id="@+id/pedido_img_star"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_star_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/back_img_food"
-                app:layout_constraintTop_toBottomOf="@+id/food_name" />
+                app:layout_constraintStart_toEndOf="@+id/pedido_back_img_food"
+                app:layout_constraintTop_toBottomOf="@+id/pedido_food_name" />
 
             <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/food_nota"
+                android:id="@+id/pedido_food_nota"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@+id/img_star"
-                app:layout_constraintTop_toBottomOf="@+id/food_name" />
+                app:layout_constraintStart_toEndOf="@+id/pedido_img_star"
+                app:layout_constraintTop_toBottomOf="@+id/pedido_food_name" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/pedido_food_precolabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -94,14 +94,14 @@
                 android:text="Preço:"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                app:layout_constraintStart_toEndOf="@id/food_nota"
-                app:layout_constraintTop_toBottomOf="@id/food_name" />
+                app:layout_constraintStart_toEndOf="@id/pedido_food_nota"
+                app:layout_constraintTop_toBottomOf="@id/pedido_food_name" />
 
 
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.CardView>
-    -->
+
 
     <TextView
         android:id="@+id/acompanhamento"
@@ -112,7 +112,7 @@
         android:text="Acompanhamento:"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemfood" />
+        app:layout_constraintTop_toBottomOf="@+id/pedido_itemfood" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_acompanhamento"

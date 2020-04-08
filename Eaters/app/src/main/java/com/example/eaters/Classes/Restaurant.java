@@ -1,8 +1,11 @@
 package com.example.eaters.Classes;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.List;
 
-public class Restaurant {
+public class Restaurant implements Parcelable {
 
     private String id;
     private String name;
@@ -39,6 +42,30 @@ public class Restaurant {
         this.stars_review = stars_review;
         this.resttipo = resttipo;
     }
+
+    protected Restaurant(Parcel in) {
+        id = in.readString();
+        name = in.readString();
+        description = in.readString();
+        logo_path = in.readString();
+        back_img_rest = in.readString();
+        time_distance = in.readString();
+        distance = in.readString();
+        resttipo = in.readString();
+        stars_review = in.readString();
+    }
+
+    public static final Creator<Restaurant> CREATOR = new Creator<Restaurant>() {
+        @Override
+        public Restaurant createFromParcel(Parcel in) {
+            return new Restaurant(in);
+        }
+
+        @Override
+        public Restaurant[] newArray(int size) {
+            return new Restaurant[size];
+        }
+    };
 
     public String getBack_img_rest() {
         return back_img_rest;
@@ -118,5 +145,23 @@ public class Restaurant {
 
     public void setResttipo(String resttipo) {
         this.resttipo = resttipo;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(logo_path);
+        dest.writeString(back_img_rest);
+        dest.writeString(time_distance);
+        dest.writeString(distance);
+        dest.writeString(resttipo);
+        dest.writeString(stars_review);
     }
 }

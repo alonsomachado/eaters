@@ -3,6 +3,7 @@ package com.example.eaters.Adapters;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentManager;
@@ -69,7 +70,11 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
 
                 MenuRestaurant_Fragment newFragment = new MenuRestaurant_Fragment();
                 FragmentManager manager = ((MainActivity)mContext).getSupportFragmentManager();
-                //FragmentManager manager = (getActivity().getSupportFragmentManager());
+                Restaurant mRestaurant = mListaRestaurants.get(position);
+                Bundle args = new Bundle();
+                args.putParcelable("Restaurant", mRestaurant);
+
+                newFragment.setArguments(args);
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
