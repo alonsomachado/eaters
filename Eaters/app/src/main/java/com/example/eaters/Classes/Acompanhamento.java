@@ -5,10 +5,10 @@ public class Acompanhamento {
 
     private String id;
     private String name;
-    private String quantidade;
+    private Integer quantidade;
     private String back_img_food;
 
-    public Acompanhamento(String id, String name, String quantidade, String back_img_food) {
+    public Acompanhamento(String id, String name, Integer quantidade, String back_img_food) {
         this.id = id;
         this.name = name;
         this.quantidade = quantidade;
@@ -31,11 +31,11 @@ public class Acompanhamento {
         this.name = name;
     }
 
-    public String getQuantidade() {
+    public Integer getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade) {
+    public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
     }
 

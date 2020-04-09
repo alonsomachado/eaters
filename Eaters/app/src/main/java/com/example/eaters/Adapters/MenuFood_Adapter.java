@@ -61,7 +61,7 @@ public class MenuFood_Adapter extends RecyclerView.Adapter<MenuFood_Adapter.View
         }*/
 
         name.setText(mListaFood.get(position).getName());
-        preco.setText(mListaFood.get(position).getPreco());
+        preco.setText(mListaFood.get(position).getPreco()); //mListaFood.get(position).getPreco()
         ingredientes.setText(mListaFood.get(position).getIngredientes());
         nota.setText(mListaFood.get(position).getNota());
 

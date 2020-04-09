@@ -48,7 +48,7 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
         ImageView logo = holder.logo;
         ImageView minus = holder.minus;
         ImageView add = holder.add;
-        String quant = mListaAcompanhamento.get(position).getQuantidade();
+        final Integer[] quant = {0}; //mListaAcompanhamento.get(position).getQuantidade();
 
         name.setText(mListaAcompanhamento.get(position).getName());
 
@@ -56,12 +56,20 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
         Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
         logo.setImageDrawable(drawable_logo);
 
-        quantidade.setText(quant);
+        quantidade.setText(String.valueOf(quant[0]));
 
         minus.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 Toast.makeText(mContext.getApplicationContext(),"Retirou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+                 if( quant[0] > 0 ) { //Not Negative
+                     Toast.makeText(mContext.getApplicationContext(),"Retirou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                     quant[0] = quant[0] - 1;
+                     quantidade.setText(String.valueOf(quant[0]));
+
+                 }else {
+                     Toast.makeText(mContext.getApplicationContext(),"Erro! Tentou retirar acompanhamento "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                 }
               }
         });
 
@@ -69,6 +77,10 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
             @Override
             public void onClick(View v) {
                 Toast.makeText(mContext.getApplicationContext(),"Adicionou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+
+                quant[0] = quant[0] + 1;
+                quantidade.setText(String.valueOf(quant[0]));
+
             }
         });
 

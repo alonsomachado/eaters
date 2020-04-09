@@ -1,17 +1,20 @@
 <resources>
     <string name="app_name">Eaters</string>
     <string name="title_activity_login">Sign in</string>
-    <string name="hello_blank_fragment">Fragmento Vazio</string>
+    <string name="hello_blank_fragment">Erro: Fragmento Vazio</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="register">Registar</string>
+    <string name="login">Entrar</string>
+    <string name="password_hint">Palavra Passe</string>
+    <string name="password_confirm_hint">Confirme a Palavra Passe</string>
+    <string name="username_hint">Nome</string>
+    <string name="address_hint">Morada</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="permission_rational">"Contacts permissions are needed for providing email completions."</string>
+
 
     <!-- Strings related to Main -->
     <string name="menuhome">Home</string>
@@ -31,5 +34,6 @@
     <!-- Strings related to Pedido -->
     <string name="pedidoConcluidoHeader">Pedido Concluido</string>
     <string name="pedidoConcluidoText">Obrigado pela compra</string>
+
 
 </resources>

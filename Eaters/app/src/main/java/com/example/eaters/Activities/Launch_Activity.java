@@ -12,15 +12,14 @@ import com.example.eaters.R;
 
 public class Launch_Activity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 1200;
+    private static int SPLASH_TIME_OUT = 1800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_);
 
-
-
+        //KITKAT ANdroid 4.4 (Version SDK 19)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window w = getWindow();
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -30,7 +29,6 @@ public class Launch_Activity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //Do any action here. Now we are moving to next page
                 Intent mySuperIntent = new Intent(Launch_Activity.this, LoginActivity.class);
                 startActivity(mySuperIntent);
                 /* This 'finish()' is for exiting the app when back button pressed from Home page */

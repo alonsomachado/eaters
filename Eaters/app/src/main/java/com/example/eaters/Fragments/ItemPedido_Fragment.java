@@ -130,7 +130,7 @@ public class ItemPedido_Fragment extends Fragment {
 
                 String id = novoacomp.getString("id");
                 String name = novoacomp.getString("name");
-                String quantidade = novoacomp.getString("quantidade");
+                Integer quantidade = 0; //novoacomp.getString("quantidade");
                 String logo = novoacomp.getString("logo_path");
 
 
