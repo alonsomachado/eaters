@@ -30,6 +30,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         btn_sign_up= findViewById(R.id.btn_sign_up);
 
+        Toast.makeText(SignUpActivity.this, "Minimo 3 Caracteres", Toast.LENGTH_LONG).show();
+
         btn_sign_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,11 +62,11 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         if (TextUtils.isEmpty(nUsername)) {
-            name.setError("Nome Obrigatorio");
+            name.setError("Nome Obrigatório");
             focusView = name;
             cancel = true;
         } else if (!isUsernameValid(nUsername)) {
-            name.setError("Nome Invalido");
+            name.setError("Nome Inválido! Minimo 3 caracteres");
             focusView = name;
             cancel = true;
         }
@@ -85,12 +87,12 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() > 5;
+        return password.length() >= 3;
     }
 
     private boolean isUsernameValid(String username) {
 
-        return username.length()>4;
+        return username.length()>=3;
     }
 
     private boolean isEqualsPass () {
@@ -100,13 +102,12 @@ public class SignUpActivity extends AppCompatActivity {
 
     public void sign_up(String name, String password) {
 
-
-
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("name", name);
         editor.putString("pass", password);
         editor.putString("address", address.getText().toString());
+        editor.putBoolean("logado", true);
         editor.commit();
 
         Intent intent = new Intent(SignUpActivity.this, MainActivity.class);

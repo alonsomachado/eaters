@@ -13,10 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.eaters.Adapters.MenuFood_Adapter;
 import com.example.eaters.Adapters.MenuFoodCategory_Adapter;
+import com.example.eaters.Adapters.MenuFood_Adapter;
 import com.example.eaters.Classes.Food;
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
@@ -28,7 +27,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class MenuRestaurant_Fragment extends Fragment {
@@ -132,15 +130,13 @@ public class MenuRestaurant_Fragment extends Fragment {
                 String id = itemmenu.getString("id");
                 String name = itemmenu.getString("name");
                 String ingredientes = itemmenu.getString("ingredientes");
-                String logo_path = itemmenu.getString("logo_path");
-                String back_img_path = itemmenu.getString("back_img_path");
+                String food_img = itemmenu.getString("food_img");
                 String preco = itemmenu.getString("preco");
                 String nota = itemmenu.getString("nota");
                 String tipo = itemmenu.getString("tipo");
 
-                Food fooditem = new Food(id,name,ingredientes,back_img_path,logo_path,preco,nota,tipo);
+                Food fooditem = new Food(id,name,ingredientes,food_img,preco,nota,tipo);
 
-                //foodtypemenu.add(tipo);
                 foods.add(fooditem);
 
             }
@@ -182,18 +178,17 @@ public class MenuRestaurant_Fragment extends Fragment {
                 String id = itemmenu.getString("id");
                 String name = itemmenu.getString("name");
                 String ingredientes = itemmenu.getString("ingredientes");
-                String logo_path = itemmenu.getString("logo_path");
-                String back_img_path = itemmenu.getString("back_img_path");
+                String food_img = itemmenu.getString("food_img");
                 String preco = itemmenu.getString("preco");
                 String nota = itemmenu.getString("nota");
                 String tipo = itemmenu.getString("tipo");
 
-                Food fooditem = new Food(id,name,ingredientes,back_img_path,logo_path,preco,nota,tipo);
+                Food fooditem = new Food(id,name,ingredientes,food_img,preco,nota,tipo);
                 foodmenu.add(fooditem);
 
             }
 
-            //Types of Foods for the Other RV
+            //Category of Foods for the Category RV
             foodcategory_adapter = new MenuFoodCategory_Adapter(context, foodmenu);
             rv_foodcategory.setAdapter(foodcategory_adapter);
 

@@ -14,61 +14,73 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eaters.Classes.Acompanhamento;
-import com.example.eaters.Classes.Restaurant;
+import com.example.eaters.Classes.Adicional;
 import com.example.eaters.R;
 
 import java.util.List;
 
-public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_Adapter.ViewHolder> {
+public class Adicional_Adapter extends RecyclerView.Adapter<Adicional_Adapter.ViewHolder> {
     private Context mContext;
-    private List<Acompanhamento> mListaAcompanhamento;
-    public Acompanhamento_Adapter(Context mContext, List<Acompanhamento> mListaDivisions) {
+    private List<Adicional> mListaAdicional;
+    public Adicional_Adapter(Context mContext, List<Adicional> mListaDivisions) {
         this.mContext = mContext;
-        this.mListaAcompanhamento = mListaDivisions;
+        this.mListaAdicional = mListaDivisions;
     }
 
     @NonNull
     @Override
-    public Acompanhamento_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Adicional_Adapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View mAcoView = inflater.inflate(R.layout.acompanhamento_item, parent, false);
-        Acompanhamento_Adapter.ViewHolder viewHolder = new Acompanhamento_Adapter.ViewHolder(mAcoView);
+        Adicional_Adapter.ViewHolder viewHolder = new Adicional_Adapter.ViewHolder(mAcoView);
 
         return viewHolder;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
-    public void onBindViewHolder(@NonNull Acompanhamento_Adapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull Adicional_Adapter.ViewHolder holder, final int position) {
         CardView acompanhamento = holder.acompanhamento;
         TextView name = holder.name;
         TextView quantidade = holder.quantidade;
+        TextView preco = holder.preco;
         ImageView logo = holder.logo;
         ImageView minus = holder.minus;
         ImageView add = holder.add;
         final Integer[] quant = {0}; //mListaAcompanhamento.get(position).getQuantidade();
 
-        name.setText(mListaAcompanhamento.get(position).getName());
+        name.setText(mListaAdicional.get(position).getName());
 
-        int id_logo = mContext.getResources().getIdentifier(mListaAcompanhamento.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
+        int id_logo = mContext.getResources().getIdentifier(mListaAdicional.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
         Drawable drawable_logo = mContext.getResources().getDrawable(id_logo);
         logo.setImageDrawable(drawable_logo);
 
         quantidade.setText(String.valueOf(quant[0]));
+        preco.setText(String.valueOf(mListaAdicional.get(position).getPreco()) );
+
+        minus.setVisibility(View.INVISIBLE);
+        quantidade.setVisibility(View.INVISIBLE);
 
         minus.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
 
-                 if( quant[0] > 0 ) { //Not Negative
-                     Toast.makeText(mContext.getApplicationContext(),"Retirou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                 if( quant[0] >= 1) { //Not Negative
+                     Toast.makeText(mContext.getApplicationContext(),"Retirou um "+ mListaAdicional.get(position).getName(),Toast.LENGTH_SHORT).show();
+                     minus.setVisibility(View.VISIBLE);
+                     quantidade.setVisibility(View.VISIBLE);
                      quant[0] = quant[0] - 1;
                      quantidade.setText(String.valueOf(quant[0]));
+                     if(quant[0] == 0) {
+                         minus.setVisibility(View.INVISIBLE);
+                         quantidade.setVisibility(View.INVISIBLE);
+                     }
 
                  }else {
-                     Toast.makeText(mContext.getApplicationContext(),"Erro! Tentou retirar acompanhamento "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                     //Toast.makeText(mContext.getApplicationContext(),"Erro! Tentou retirar acompanhamento "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
+                     minus.setVisibility(View.INVISIBLE);
+                     quantidade.setVisibility(View.INVISIBLE);
                  }
               }
         });
@@ -76,8 +88,9 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext.getApplicationContext(),"Adicionou um "+mListaAcompanhamento.get(position).getName(),Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(mContext.getApplicationContext(),"Adicionou um "+ mListaAdicional.get(position).getName(),Toast.LENGTH_SHORT).show();
+                minus.setVisibility(View.VISIBLE);
+                quantidade.setVisibility(View.VISIBLE);
                 quant[0] = quant[0] + 1;
                 quantidade.setText(String.valueOf(quant[0]));
 
@@ -97,12 +110,12 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
 
     @Override
     public int getItemCount() {
-        return mListaAcompanhamento.size();
+        return mListaAdicional.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name, quantidade;
+        public TextView name, quantidade, preco;
         public ImageView logo, minus, add;
         public CardView acompanhamento;
 
@@ -115,6 +128,7 @@ public class Acompanhamento_Adapter extends RecyclerView.Adapter<Acompanhamento_
             logo = itemView.findViewById(R.id.acompanhamentoicon);
             minus = itemView.findViewById(R.id.acompanhamentominus);
             add = itemView.findViewById(R.id.acompanhamentoadd);
+            preco = (TextView) itemView.findViewById(R.id.acompanhamentopreco);
 
             acompanhamento = itemView.findViewById(R.id.itemAcompanhamento);
 

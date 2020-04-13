@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profile_picture" />
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/profile_line1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="28dp"
@@ -74,7 +74,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
-            android:text="Cupons"
+            android:text="@string/profile_cupons"
             android:textColor="#000"
             android:textSize="18dp"
             app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
@@ -86,7 +86,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="8dp"
-            android:text="Meus cupons de desconto"
+            android:text="@string/profile_cupons_text"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
@@ -96,12 +96,13 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/profile_line2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/profile_line1">
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/appCompatImageView2"
@@ -120,7 +121,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="8dp"
-            android:text="Minhas formas de pagamento"
+            android:text="@string/profile_cards_text"
             android:textSize="16dp"
             android:textColor="@color/colorText"
             app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
@@ -133,7 +134,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="16dp"
-            android:text="Pagamentos"
+            android:text="@string/profile_cards"
             android:textColor="#000"
             android:textSize="18dp"
             app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
@@ -142,7 +143,18 @@
     </android.support.constraint.ConstraintLayout>
 
 
-
+    <Button
+        android:id="@+id/btn_logout"
+        style="@android:style/Widget.Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/white"
+        android:text="@string/logout"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_line2" />
 
 
 

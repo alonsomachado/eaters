@@ -1,0 +1,32 @@
+[
+  {
+    "id":"1",
+    "name":"Bacon",
+    "preco":"1.00",
+    "logo_path":"tabbelga"
+  },
+  {
+    "id":"2",
+    "name":"Queijo",
+    "preco":"1.50",
+    "logo_path":"tabbelga"
+  },
+  {
+    "id":"3",
+    "name":"Hamburger (80g)",
+    "preco":"3.00",
+    "logo_path":"bk_logo"
+  },
+  {
+    "id":"4",
+    "name":"Salada (Alface em tiras e tomate)",
+    "preco":"1.00",
+    "logo_path":"bk_logo"
+  },
+  {
+    "id":"5",
+    "name":"Pickles",
+    "preco":"1.00",
+    "logo_path":"bk_logo"
+  }
+]

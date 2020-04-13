@@ -1,17 +1,17 @@
 package com.example.eaters.Classes;
 
-public class Acompanhamento {
+public class Adicional {
 
 
     private String id;
     private String name;
-    private Integer quantidade;
+    private Integer preco;
     private String back_img_food;
 
-    public Acompanhamento(String id, String name, Integer quantidade, String back_img_food) {
+    public Adicional(String id, String name, Integer preco, String back_img_food) {
         this.id = id;
         this.name = name;
-        this.quantidade = quantidade;
+        this.preco = preco;
         this.back_img_food = back_img_food;
     }
 
@@ -31,12 +31,12 @@ public class Acompanhamento {
         this.name = name;
     }
 
-    public Integer getQuantidade() {
-        return quantidade;
+    public Integer getPreco() {
+        return preco;
     }
 
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
+    public void setPreco(Integer preco) {
+        this.preco = preco;
     }
 
     public String getBack_img_food() {

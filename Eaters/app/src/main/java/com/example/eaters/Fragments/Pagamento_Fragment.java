@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Activities.ProgressBarActivity;
 import com.example.eaters.Dialogs.Dialog_TrocoPagamento;
 import com.example.eaters.R;

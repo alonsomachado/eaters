@@ -22,13 +22,12 @@
 
 
             <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/pedido_back_img_food"
+                android:id="@+id/pedido_food_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="24dp"
-                android:background="@mipmap/ic_launcher"
                 android:scaleType="fitCenter"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +39,7 @@
                 android:layout_marginTop="8dp"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/pedido_back_img_food"
+                app:layout_constraintStart_toEndOf="@+id/pedido_food_img"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -74,7 +73,7 @@
                 android:src="@drawable/ic_star_black_24dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/pedido_back_img_food"
+                app:layout_constraintStart_toEndOf="@+id/pedido_food_img"
                 app:layout_constraintTop_toBottomOf="@+id/pedido_food_name" />
 
             <android.support.v7.widget.AppCompatTextView
@@ -91,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_marginLeft="2dp"
-                android:text="Preço:"
+                android:text="@string/preco_label"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@id/pedido_food_nota"
@@ -104,18 +103,18 @@
 
 
     <TextView
-        android:id="@+id/acompanhamento"
+        android:id="@+id/adicional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Acompanhamento:"
+        android:text="@string/adicional"
         android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pedido_itemfood" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_acompanhamento"
+        android:id="@+id/rv_adicional"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -127,20 +126,20 @@
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acompanhamento" />
+        app:layout_constraintTop_toBottomOf="@+id/adicional" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/food_observacao_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Observações:"
+        android:text="@string/food_obs_label"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_acompanhamento" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_adicional" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/food_observacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -149,21 +148,21 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Coloque aqui Alergias ou Observações como Sem Cebola..."
+        android:hint="@string/obs_hint"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/food_observacao_label" />
 
     <Button
-        android:id="@+id/btn_adicionar"
+        android:id="@+id/btn_add"
         style="@android:style/Widget.Button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:text="Adicionar"
+        android:text="@string/btn_add"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/food_observacao" />
 </android.support.constraint.ConstraintLayout>

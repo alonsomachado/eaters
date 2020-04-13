@@ -34,6 +34,16 @@
     <!-- Strings related to Pedido -->
     <string name="pedidoConcluidoHeader">Pedido Concluido</string>
     <string name="pedidoConcluidoText">Obrigado pela compra</string>
+    <string name="obs_hint">Coloque aqui Alergias ou Observações como Sem Cebola...</string>
+    <string name="adicional">Adicional:</string>
+    <string name="btn_add">Adicionar</string>
+    <string name="food_obs_label">Observações:</string>
+    <string name="preco_label">Preço:</string>
+    <string name="profile_cupons">Cupons</string>
+    <string name="profile_cupons_text">Meus cupons de desconto</string>
+    <string name="profile_cards">Pagamentos</string>
+    <string name="profile_cards_text">Minhas formas de pagamento</string>
+    <string name="logout">Logout</string>
 
 
 </resources>

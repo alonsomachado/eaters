@@ -3,8 +3,6 @@ package com.example.eaters.Fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.eaters.Activities.MainActivity;
 import com.example.eaters.Adapters.Promotions_Adapter;
 import com.example.eaters.Adapters.Restaurant_Adapter;
 import com.example.eaters.Classes.Promocao;
@@ -43,7 +40,7 @@ public class Main_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        v = inflater.inflate(R.layout.fragment_main_, container, false);
+        v = inflater.inflate(R.layout.fragment_main, container, false);
         rv_restaurants = v.findViewById(R.id.rv_rest);
         rv_restaurants.setHasFixedSize(true);
         rv_restaurants.setLayoutManager(new LinearLayoutManager(getContext()));

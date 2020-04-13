@@ -1,8 +1,10 @@
 package com.example.eaters.Fragments;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
@@ -12,14 +14,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.eaters.Activities.MainActivity;
-import com.example.eaters.Adapters.Acompanhamento_Adapter;
-import com.example.eaters.Classes.Acompanhamento;
+import com.example.eaters.Adapters.Adicional_Adapter;
+import com.example.eaters.Classes.Adicional;
 import com.example.eaters.Classes.Food;
-import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
 
 import org.json.JSONArray;
@@ -33,16 +34,17 @@ import java.util.ArrayList;
 public class ItemPedido_Fragment extends Fragment {
 
     private View v;
-    RecyclerView rv_acompanhamento;
-    Acompanhamento_Adapter acom_adapter;
-    private Button btn_adicionar;
+    RecyclerView rv_adicional;
+    Adicional_Adapter acom_adapter;
+    private Button btn_add;
     TextView pedido_name;
     TextView pedido_preco;
     TextView pedido_ingredientes;
     TextView pedido_nota;
-    //ImageView pedido_back_img;
+    ImageView pedido_food_img;
     CardView pedido_itemfood;
     Food mFood;
+    ArrayList<Adicional> mAdicionals;
 
 
     @Override
@@ -50,16 +52,16 @@ public class ItemPedido_Fragment extends Fragment {
         // Inflate the layout for this fragment
 
         v = inflater.inflate(R.layout.fragment_itempedido, container, false);
-        rv_acompanhamento = v.findViewById(R.id.rv_acompanhamento);
-        rv_acompanhamento.setHasFixedSize(true);
-        rv_acompanhamento.setLayoutManager(new LinearLayoutManager(getContext()));
-        btn_adicionar= v.findViewById(R.id.btn_adicionar);
+        rv_adicional = v.findViewById(R.id.rv_adicional);
+        rv_adicional.setHasFixedSize(true);
+        rv_adicional.setLayoutManager(new LinearLayoutManager(getContext()));
+        btn_add = v.findViewById(R.id.btn_add);
 
         pedido_name = (TextView) v.findViewById(R.id.pedido_food_name);
         pedido_preco = (TextView) v.findViewById(R.id.pedido_food_preco);
         pedido_nota = (TextView) v.findViewById(R.id.pedido_food_nota);
         pedido_ingredientes = (TextView) v.findViewById(R.id.pedido_food_ingredients);
-        //pedido_background_img = v.findViewById(R.id.pedido_back_img_food);
+        pedido_food_img = (ImageView) v.findViewById(R.id.pedido_food_img);
 
         pedido_itemfood = v.findViewById(R.id.pedido_itemfood);
 
@@ -72,30 +74,36 @@ public class ItemPedido_Fragment extends Fragment {
             pedido_ingredientes.setText(mFood.getIngredientes());
             pedido_nota.setText(mFood.getNota());
 
-            /*int id_back = mContext.getResources().getIdentifier(mListaFood.get(position).getBack_img_food(), "drawable", mContext.getPackageName());
+            int id_back = getContext().getResources().getIdentifier(mFood.getFood_img(), "drawable", getContext().getPackageName());
 
-             Drawable drawable_back = mContext.getResources().getDrawable(id_back);
+             Drawable drawable_back = getContext().getResources().getDrawable(id_back);
             if (drawable_back != null) {
-                back_img.setImageDrawable(drawable_back);
-            }*/
+                pedido_food_img.setImageDrawable(drawable_back);
+            }
         }
 
 
-        String acomDummyData = "Acompanhamento.json";
-        getAssetJsonData(getContext(), acomDummyData);
+        String acomDummyData = "Adicional.json";
+        mAdicionals = getAssetJsonData(getContext(), acomDummyData);
 
-        btn_adicionar.setOnClickListener(new View.OnClickListener() {
+        btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Clicou em Adicionar! ",Toast.LENGTH_SHORT).show();
-                //mContext = getContext();
+                Toast.makeText(getContext(),"Adicionou "+ mFood.getName() +" ao Carrinho!",Toast.LENGTH_SHORT).show();
                 Cart_Fragment newFragment = new Cart_Fragment();
                 //FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
                 FragmentManager manager = (getActivity().getSupportFragmentManager());
 
+                //Pedido mPedido = new Pedido(0,mFood,1, mAcompanhamentos,1);
+                //R.id.navigation
+
                 Bundle args = new Bundle();
-                args.putString("chave", "valor");
+                args.putParcelable("Food", mFood);
                 newFragment.setArguments(args);
+
+                FragmentActivity mActivity = getActivity();
+                //mActivity.getAssets().
+
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
@@ -109,10 +117,10 @@ public class ItemPedido_Fragment extends Fragment {
         return v;
     }
 
-    public ArrayList<Acompanhamento> getAssetJsonData(Context context, String arqData) {
+    public ArrayList<Adicional> getAssetJsonData(Context context, String arqData) {
         String json = null;
 
-        ArrayList<Acompanhamento> acompanhamentos = new ArrayList<Acompanhamento>();
+        ArrayList<Adicional> adicionals = new ArrayList<Adicional>();
         try {
             InputStream is = context.getAssets().open(arqData);
             int size = is.available();
@@ -130,19 +138,19 @@ public class ItemPedido_Fragment extends Fragment {
 
                 String id = novoacomp.getString("id");
                 String name = novoacomp.getString("name");
-                Integer quantidade = 0; //novoacomp.getString("quantidade");
+                Integer preco = novoacomp.getInt("preco");
                 String logo = novoacomp.getString("logo_path");
 
 
-                Acompanhamento acomp = new Acompanhamento(id, name, quantidade, logo);
+                Adicional acomp = new Adicional(id, name, preco, logo);
 
-                acompanhamentos.add(acomp);
+                adicionals.add(acomp);
 
             }
 
 
-            acom_adapter = new Acompanhamento_Adapter(context, acompanhamentos);
-            rv_acompanhamento.setAdapter(acom_adapter);
+            acom_adapter = new Adicional_Adapter(context, adicionals);
+            rv_adicional.setAdapter(acom_adapter);
 
 
         } catch (IOException ex) {
@@ -155,7 +163,7 @@ public class ItemPedido_Fragment extends Fragment {
         //Log.e("Dados Favoritos", json);
 
 
-        return acompanhamentos;
+        return adicionals;
     }
 }
 

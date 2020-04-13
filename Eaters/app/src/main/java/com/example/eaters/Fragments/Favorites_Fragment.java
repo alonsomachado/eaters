@@ -1,18 +1,15 @@
 package com.example.eaters.Fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.eaters.Adapters.Favorites_Adapter;
-import com.example.eaters.Adapters.Restaurant_Adapter;
 import com.example.eaters.Classes.Restaurant;
 import com.example.eaters.R;
 
@@ -37,7 +34,7 @@ public class Favorites_Fragment extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             // Inflate the layout for this fragment
 
-            v = inflater.inflate(R.layout.fragment_favorites_, container, false);
+            v = inflater.inflate(R.layout.fragment_favorites, container, false);
             rv_fav = v.findViewById(R.id.rv_fav);
             rv_fav.setHasFixedSize(true);
             rv_fav.setLayoutManager(new LinearLayoutManager(getContext()));
