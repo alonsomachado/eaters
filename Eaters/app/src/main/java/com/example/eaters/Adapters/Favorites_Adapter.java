@@ -51,6 +51,7 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
         CardView favorit = holder.favorit;
         TextView name = holder.name;
         TextView nota = holder.nota;
+        TextView description = holder.description;
         TextView resttipo = holder.resttipo;
         ImageView logo = holder.logo;
 
@@ -61,6 +62,7 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
         name.setText(mListaRestaurants.get(position).getName());
         resttipo.setText(mListaRestaurants.get(position).getResttipo());
         nota.setText(mListaRestaurants.get(position).getStars_review());
+        description.setText(mListaRestaurants.get(position).getDescription());
 
         favorit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +97,7 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView name, resttipo, nota;
+        public TextView name, resttipo, nota,description;
         public ImageView logo;
         public CardView favorit;
 
@@ -105,6 +107,7 @@ public class Favorites_Adapter extends RecyclerView.Adapter<Favorites_Adapter.Vi
             name = (TextView) itemView.findViewById(R.id.fav_name);
             nota = (TextView) itemView.findViewById(R.id.fav_nota);
             resttipo = (TextView) itemView.findViewById(R.id.fav_tipo);
+            description = (TextView) itemView.findViewById(R.id.fav_description);
             logo = itemView.findViewById(R.id.logo_img_restfav);
 
             favorit = itemView.findViewById(R.id.favorit);

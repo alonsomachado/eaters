@@ -41,7 +41,7 @@ public class Adicional_Adapter extends RecyclerView.Adapter<Adicional_Adapter.Vi
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(@NonNull Adicional_Adapter.ViewHolder holder, final int position) {
-        CardView acompanhamento = holder.acompanhamento;
+        CardView acompanhamento = holder.adicional;
         TextView name = holder.name;
         TextView quantidade = holder.quantidade;
         TextView preco = holder.preco;
@@ -117,20 +117,20 @@ public class Adicional_Adapter extends RecyclerView.Adapter<Adicional_Adapter.Vi
 
         public TextView name, quantidade, preco;
         public ImageView logo, minus, add;
-        public CardView acompanhamento;
+        public CardView adicional;
 
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.acompanhamentoname);
-            quantidade = (TextView) itemView.findViewById(R.id.acompanhamentoqnt);
-            logo = itemView.findViewById(R.id.acompanhamentoicon);
-            minus = itemView.findViewById(R.id.acompanhamentominus);
-            add = itemView.findViewById(R.id.acompanhamentoadd);
-            preco = (TextView) itemView.findViewById(R.id.acompanhamentopreco);
+            name = (TextView) itemView.findViewById(R.id.adicionalname);
+            quantidade = (TextView) itemView.findViewById(R.id.adicionalqnt);
+            logo = itemView.findViewById(R.id.adicionalicon);
+            minus = itemView.findViewById(R.id.adicionalminus);
+            add = itemView.findViewById(R.id.adicionaladd);
+            preco = (TextView) itemView.findViewById(R.id.adicionalpreco);
 
-            acompanhamento = itemView.findViewById(R.id.itemAcompanhamento);
+            adicional = itemView.findViewById(R.id.itemAdicional);
 
         }
     }

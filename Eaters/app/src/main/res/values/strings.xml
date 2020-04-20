@@ -44,6 +44,9 @@
     <string name="profile_cards">Pagamentos</string>
     <string name="profile_cards_text">Minhas formas de pagamento</string>
     <string name="logout">Logout</string>
+    <string name="adicional_unit_label">Valor por Unidade:</string>
+
+    <string name="eurosymbol">€</string>
 
 
 </resources>

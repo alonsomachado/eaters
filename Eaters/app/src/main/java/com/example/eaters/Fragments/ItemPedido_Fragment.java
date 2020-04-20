@@ -94,16 +94,10 @@ public class ItemPedido_Fragment extends Fragment {
                 //FragmentManager manager = ((MainActivity)getContext()).getSupportFragmentManager();
                 FragmentManager manager = (getActivity().getSupportFragmentManager());
 
-                //Pedido mPedido = new Pedido(0,mFood,1, mAcompanhamentos,1);
-                //R.id.navigation
-
                 Bundle args = new Bundle();
                 args.putParcelable("Food", mFood);
+                args.putString("nomeFood", mFood.getName());
                 newFragment.setArguments(args);
-
-                FragmentActivity mActivity = getActivity();
-                //mActivity.getAssets().
-
 
                 FragmentTransaction transaction=manager.beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);

@@ -40,7 +40,9 @@ public class LoginActivity extends AppCompatActivity {
         }else {
             String name = settings2.getString("name", ""); //Não criou um Utilizador ainda
             if(name == "") {
-                Toast.makeText(LoginActivity.this, "Crie um Utilizador", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
+                //Toast.makeText(LoginActivity.this, "Crie um Utilizador", Toast.LENGTH_LONG).show();
             }
         }
 

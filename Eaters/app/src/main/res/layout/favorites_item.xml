@@ -19,7 +19,6 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
-            android:background="@mipmap/ic_launcher"
             android:contentDescription="Restaurante Logo"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +43,15 @@
             app:layout_constraintStart_toEndOf="@+id/logo_img_restfav"
             app:layout_constraintTop_toBottomOf="@+id/fav_name" />
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/fav_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/logo_img_restfav"
+            app:layout_constraintTop_toBottomOf="@+id/fav_tipo" />
+
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/imgfav_star"
             android:layout_width="wrap_content"
@@ -52,7 +60,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/logo_img_restfav"
-            app:layout_constraintTop_toBottomOf="@+id/fav_tipo" />
+            app:layout_constraintTop_toBottomOf="@+id/fav_description" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/fav_nota"
@@ -60,7 +68,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/imgfav_star"
-            app:layout_constraintTop_toBottomOf="@+id/fav_tipo" />
+            app:layout_constraintTop_toBottomOf="@+id/fav_description" />
 
 
     </android.support.constraint.ConstraintLayout>

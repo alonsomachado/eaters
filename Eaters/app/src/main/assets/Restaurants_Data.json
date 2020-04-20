@@ -9,139 +9,21 @@
          "resttipo":"Pizzaria",
          "distance":"16 km",
          "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
+
          ],
          "stars_review":"75"
       },
       { 
          "id":"2",
          "name":"Burguer King Guimarães ",
-         "description":"BK 1 is the best",
+         "description":"BK Guimarães is the best",
          "logo_path":"bk_logo",
          "back_img_path":"burguer_king_back",
          "time_distance":"10-20 min",
          "resttipo":"Hamburgueria",
          "distance":"16 km",
          "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
+
          ],
          "stars_review":"45"
       },
@@ -153,70 +35,11 @@
          "back_img_path":"mac_back",
          "time_distance":"10-20 min",
          "resttipo":"Hamburgueria",
-         "distance":"2 km",
+         "distance":"29 km",
          "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
+
          ],
-         "stars_review":"85"
+         "stars_review":"5"
       },
       { 
          "id":"4",
@@ -228,286 +51,92 @@
          "time_distance":"10-20 min",
          "distance":"38 km",
          "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
+
          ],
          "stars_review":"999"
       },
       {
          "id":"5",
-         "name":"Burguer King Braga ",
-         "description":"BK 1 is the best",
-         "logo_path":"bk_logo",
-         "back_img_path":"burguer_king_back",
+         "name":"Pizzaria Pedaco de Pizza",
+         "description":"Pizzaria Brasileira",
+         "logo_path":"pizzaria_pedacopizza",
+         "back_img_path":"pizza_hut_back",
          "time_distance":"10-20 min",
-         "resttipo":"Hamburgueria",
-         "distance":"49 km",
+         "resttipo":"Pizzaria",
+         "distance":"0.5 km",
          "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
-         ],
-         "stars_review":"321"
-      },
-      {
-         "id":"6",
-         "name":"Mac'Donalds Braga",
-         "description":"Mac is the best",
-         "logo_path":"mac_logo",
-         "back_img_path":"mac_back",
-         "time_distance":"10-20 min",
-         "resttipo":"Hamburgueria",
-         "distance":"42 km",
-         "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
-         ],
-         "stars_review":"0"
-      },
-      {
-         "id":"7",
-         "name":"Mac'Donalds Coimbra",
-         "description":"Mac is the best",
-         "logo_path":"mac_logo",
-         "back_img_path":"mac_back",
-         "time_distance":"10-20 min",
-         "resttipo":"Hamburgueria",
-         "distance":"1 km",
-         "food_list":[
-            {
-               "id":"1",
-               "name":"Pizza Calabreza",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabreza",
-               "tipo":"pizza",
-               "nota":"4.5"
-            },
-            {
-               "id":"2",
-               "name":"Pizza Marguerita",
-               "ingredientes":"Massa, Molho de Tomate e Mussarela",
-               "preco":"8",
-               "logo_path":"pizzamarguerita",
-               "back_img_path":"qp1",
-               "tipo":"pizza",
-               "nota":"4"
-            },
-            {
-               "id":"3",
-               "name":"Pizza Frango com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Frango Desfiado e Philadelphia",
-               "preco":"9",
-               "logo_path":"qp1",
-               "back_img_path":"pizzafrangophiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"4",
-               "name":"Pizza Calabreza com Philadelphia",
-               "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzacalabrezaphiladelphia",
-               "tipo":"pizza",
-               "nota":"5"
-            },
-            {
-               "id":"5",
-               "name":"Pizza Chocolate",
-               "ingredientes":"Massa, Chocolate, Morangos",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocolate",
-               "tipo":"pizza doce",
-               "nota":"5"
-            },
-            {
-               "id":"6",
-               "name":"Pizza Chocolate com Sorvete",
-               "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-               "preco":"10",
-               "logo_path":"qp1",
-               "back_img_path":"pizzachocosorvete",
-               "tipo":"pizza doce",
-               "nota":"5"
-            }
+
          ],
          "stars_review":"487"
-      }
+      },
+   {
+      "id":"6",
+      "name":"Outback SteakHouse Porto",
+      "description":"Outback SteakHouse - O Sabor Australiano",
+      "logo_path":"outback",
+      "back_img_path":"pizza_hut_back",
+      "time_distance":"10-20 min",
+      "resttipo":"Hamburgueria",
+      "distance":"5 km",
+      "food_list":[
+
+      ],
+      "stars_review":"125"
+   },
+   {
+      "id":"7",
+      "name":"Subway Porto",
+      "description":"Subway Lanches Saudaveis",
+      "logo_path":"subway",
+      "back_img_path":"pizza_hut_back",
+      "time_distance":"10-20 min",
+      "resttipo":"Hamburgueria",
+      "distance":"3 km",
+      "food_list":[
+
+      ],
+      "stars_review":"199"
+   },
+   {
+      "id":"8",
+      "name":"Pizzaria Sorella",
+      "description":"Pizzaria Sorella",
+      "logo_path":"pizzaria_sorella",
+      "back_img_path":"pizza_hut_back",
+      "time_distance":"10-20 min",
+      "resttipo":"Pizzaria",
+      "distance":"120 km",
+      "food_list":[
+
+      ],
+      "stars_review":"169"
+   },
+   {
+      "id":"9",
+      "name":"Burguer King Braga ",
+      "description":"BK Braga is the best",
+      "logo_path":"bk_logo",
+      "back_img_path":"burguer_king_back",
+      "time_distance":"10-20 min",
+      "resttipo":"Hamburgueria",
+      "distance":"49 km",
+      "food_list":[
+
+      ],
+      "stars_review":"321"
+   },
+   {
+      "id":"10",
+      "name":"Mac'Donalds Braga",
+      "description":"Mac is the best",
+      "logo_path":"mac_logo",
+      "back_img_path":"mac_back",
+      "time_distance":"10-20 min",
+      "resttipo":"Hamburgueria",
+      "distance":"42 km",
+      "food_list":[
+
+      ],
+      "stars_review":"12"
+   }
 ]

@@ -1,8 +1,8 @@
 [
   {
     "id":"1",
-    "name":"Pizza Calabreza",
-    "ingredientes":"Massa, Molho de Tomate, Mussarela e Calabreza",
+    "name":"Pizza Pepperoni",
+    "ingredientes":"Massa, Molho de Tomate, Mussarela e Pepperoni",
     "preco":"9",
     "food_img":"pizzacalabreza",
     "tipo":"pizza",
@@ -12,7 +12,7 @@
     "id":"2",
     "name":"Pizza Marguerita",
     "ingredientes":"Massa, Molho de Tomate e Mussarela",
-    "preco":"8",
+    "preco":"8.5",
     "food_img":"pizzamarguerita",
     "tipo":"pizza",
     "nota":"4"
@@ -28,8 +28,8 @@
   },
   {
     "id":"4",
-    "name":"Pizza Calabreza com Philadelphia",
-    "ingredientes":"Massa, Molho de Tomate, Mussarela, Calabreza e Philadelphia",
+    "name":"Pizza Pepperoni com Philadelphia",
+    "ingredientes":"Massa, Molho de Tomate, Mussarela, Pepperoni e Philadelphia",
     "preco":"10",
     "food_img":"pizzacalabrezaphiladelphia",
     "tipo":"pizza",
@@ -37,6 +37,24 @@
   },
   {
     "id":"5",
+    "name":"Pizza Strogonoff de Carne",
+    "ingredientes":"Massa, Molho de Tomate, Queijo Mussarela, Strogonoff de Carne, Batata Palha",
+    "preco":"11",
+    "food_img":"pizzastrognoff",
+    "tipo":"pizza",
+    "nota":"4.4"
+  },
+  {
+    "id":"6",
+    "name":"Pizza Bacon",
+    "ingredientes":"Massa, Molho de Tomate, Queijo Mussarela, Bacon",
+    "preco":"9",
+    "food_img":"pizzabacon",
+    "tipo":"pizza",
+    "nota":"4.8"
+  },
+  {
+    "id":"7",
     "name":"Pizza Chocolate",
     "ingredientes":"Massa, Chocolate, Morangos",
     "preco":"10",
@@ -45,12 +63,104 @@
     "nota":"5"
   },
   {
-    "id":"6",
+    "id":"8",
     "name":"Pizza Chocolate com Sorvete",
     "ingredientes":"Massa, Chocolate, Sorvete de Baunilha, Raspas de chocolate e Cerejas",
-    "preco":"10",
+    "preco":"12",
     "food_img":"pizzachocosorvete",
     "tipo":"pizza doce",
     "nota":"5"
+  },
+  {
+    "id":"9",
+    "name":"Pizza Paçoca",
+    "ingredientes":"Massa doce, Creme de amendoim, Paçoca",
+    "preco":"9",
+    "food_img":"pizzapacoca",
+    "tipo":"pizza doce",
+    "nota":"5"
+  },
+  {
+    "id":"10",
+    "name":"Coca-Cola Lata",
+    "ingredientes":"Coca-Cola",
+    "preco":"2",
+    "food_img":"bebida_lata_coca",
+    "tipo":"bebida",
+    "nota":"5"
+  },
+  {
+    "id":"11",
+    "name":"Guarana Antartica Lata",
+    "ingredientes":"Guarana Antartica",
+    "preco":"2",
+    "food_img":"bebida_lata_guarana",
+    "tipo":"bebida",
+    "nota":"5"
+  },
+  {
+    "id":"12",
+    "name":"Fanta Lata",
+    "ingredientes":"Fanta",
+    "preco":"2",
+    "food_img":"bebida_lata_guarana",
+    "tipo":"bebida",
+    "nota":"5"
+  },
+  {
+    "id":"13",
+    "name":"Coca-Cola Zero Lata",
+    "ingredientes":"Coca-Cola Zero Açucar",
+    "preco":"2",
+    "food_img":"bebida_lata_cocazero",
+    "tipo":"bebida",
+    "nota":"5"
+  },
+  {
+    "id":"14",
+    "name":"Super Bock Lata",
+    "ingredientes":"Super Bock",
+    "preco":"2",
+    "food_img":"bebida_lata_superbock",
+    "tipo":"bebida alcoolica",
+    "nota":"5"
+  },
+  {
+    "id":"15",
+    "name":"Sagres Lata",
+    "ingredientes":"Sagres",
+    "preco":"2",
+    "food_img":"bebida_lata_sagres",
+    "tipo":"bebida alcoolica",
+    "nota":"5"
+  },
+  {
+    "id":"16",
+    "name":"Burguer",
+    "ingredientes":"Pao, Hamburguer, queijo, alface e tomate",
+    "preco":"2",
+    "food_img":"hamburguercaseiro",
+    "tipo":"hamburguer",
+    "nota":"4.5"
+  },
+  {
+    "id":"17",
+    "name":"Burguer Picanha",
+    "ingredientes":"Picanha Burguer Outback",
+    "preco":"2",
+    "food_img":"burguer_picanha",
+    "tipo":"hamburguer",
+    "nota":"5"
+  },
+  {
+    "id":"18",
+    "name":"Batata Frita",
+    "ingredientes":"Batata Frita",
+    "preco":"2",
+    "food_img":"acompanhamento_batatafrita",
+    "tipo":"acompanhamento",
+    "nota":"5"
   }
+
+
 ]
