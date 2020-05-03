@@ -1,9 +1,9 @@
 # Eaters
-Eaters Projeto de Design Interacao ESTG 2019/2020
+Após criar todo o UX e UI, Resolvi criar o App em Android Nativo em JAVA 
+Focado em design e navegação, muitos Recyclerviews com adapters
 
-Um app android Nativo, de entrega de comida.
+Eaters Projeto de Design Interação ESTG 2019/2020 (Entrega em Adobe XD)
 
-Focado em design e navegação, muitos Recyclerviews
 Pensado para usuários com visão normal e também daltônicos (deutetonomalia, tritanotopia)...
 
 Concepção de layout e protótipo: 
