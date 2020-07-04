@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SignUpActivity">
+    tools:context="com.alonsomachado.eaters.Activities.SignUpActivity">
 
     <ImageView
         android:id="@+id/imageViewLogoSg"

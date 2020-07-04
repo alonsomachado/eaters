@@ -8,10 +8,18 @@
          "time_distance":"10-20 min",
          "resttipo":"Pizzaria",
          "distance":"16 km",
+         "stars_review":"75",
          "food_list":[
+            {
+               "id":"1",
+               "name1":"Teste1"
+            },
+            {
+               "id":"2",
+               "name1":"Teste2"
+            }
+         ]
 
-         ],
-         "stars_review":"75"
       },
       { 
          "id":"2",
@@ -23,7 +31,14 @@
          "resttipo":"Hamburgueria",
          "distance":"16 km",
          "food_list":[
-
+            {
+               "id":"1",
+               "name1":"Teste1"
+            },
+            {
+               "id":"2",
+               "name1":"Teste2"
+            }
          ],
          "stars_review":"45"
       },
@@ -37,7 +52,14 @@
          "resttipo":"Hamburgueria",
          "distance":"29 km",
          "food_list":[
-
+            {
+               "id":"1",
+               "name1":"Teste1"
+            },
+            {
+               "id":"2",
+               "name1":"Teste2"
+            }
          ],
          "stars_review":"5"
       },
@@ -51,7 +73,14 @@
          "time_distance":"10-20 min",
          "distance":"38 km",
          "food_list":[
-
+            {
+               "id":"1",
+               "name1":"Teste1"
+            },
+            {
+               "id":"2",
+               "name1":"Teste2"
+            }
          ],
          "stars_review":"999"
       },
@@ -65,7 +94,14 @@
          "resttipo":"Pizzaria",
          "distance":"0.5 km",
          "food_list":[
-
+            {
+               "id":"1",
+               "name1":"Teste1"
+            },
+            {
+               "id":"2",
+               "name1":"Teste2"
+            }
          ],
          "stars_review":"487"
       },
@@ -79,7 +115,14 @@
       "resttipo":"Hamburgueria",
       "distance":"5 km",
       "food_list":[
-
+         {
+            "id":"1",
+            "name1":"Teste1"
+         },
+         {
+            "id":"2",
+            "name1":"Teste2"
+         }
       ],
       "stars_review":"125"
    },
@@ -93,7 +136,14 @@
       "resttipo":"Hamburgueria",
       "distance":"3 km",
       "food_list":[
-
+         {
+            "id":"1",
+            "name1":"Teste1"
+         },
+         {
+            "id":"2",
+            "name1":"Teste2"
+         }
       ],
       "stars_review":"199"
    },
@@ -107,7 +157,14 @@
       "resttipo":"Pizzaria",
       "distance":"120 km",
       "food_list":[
-
+         {
+            "id":"1",
+            "name1":"Teste1"
+         },
+         {
+            "id":"2",
+            "name1":"Teste2"
+         }
       ],
       "stars_review":"169"
    },
@@ -121,7 +178,14 @@
       "resttipo":"Hamburgueria",
       "distance":"49 km",
       "food_list":[
-
+         {
+            "id":"1",
+            "name1":"Teste1"
+         },
+         {
+            "id":"2",
+            "name1":"Teste2"
+         }
       ],
       "stars_review":"321"
    },
@@ -135,7 +199,14 @@
       "resttipo":"Hamburgueria",
       "distance":"42 km",
       "food_list":[
-
+         {
+            "id":"1",
+            "name1":"Teste1"
+         },
+         {
+            "id":"2",
+            "name1":"Teste2"
+         }
       ],
       "stars_review":"12"
    }
